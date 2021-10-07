@@ -3,6 +3,6 @@
 
 ### Created by Brianna Bias, Elise Muellerleile, & Sofia Tejada
 ---
-![Wireframes-flow](https://user-images.githubusercontent.com/79237986/136301125-deee45a4-b9f6-4ec2-b1c6-ead7d1c51678.png)
-![Wireframes1](https://user-images.githubusercontent.com/79237986/136301132-c13073c4-ec52-41c5-9caa-5eb04ceb04bf.png)
+![vibn-wireframes](https://user-images.githubusercontent.com/79237986/136305140-546b90d1-9a0a-4b5e-aee5-dda14f8e7690.png)
+![wireframes-1](https://user-images.githubusercontent.com/79237986/136305148-545b6451-6f12-4a94-9cef-5f423ee20572.png)
 ![Wireframes2](https://user-images.githubusercontent.com/79237986/136301149-73adb444-7ce8-40bf-adde-60de989fc685.png)
