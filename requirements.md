@@ -42,9 +42,6 @@ Inability to message unless it’s a match.
 
 # Functional Requirements
 ---
-## Admins:
----
-
 ## Users:
 ---
 Users can connect to the app via Spotify and create a profile. They will be able to interact with other users via messaging. Can access another users detailed profile that displays their information and top Spotify artists/tracks.
