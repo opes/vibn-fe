@@ -9,8 +9,8 @@ export const fetchTopArtists = async (token) => {
     },
   });
 
-  const thing = await res.json();
-  return thing.items;
+  const data = await res.json();
+  return data.items;
 };
 
 export const tokenRefresh = async (refresh_token) => {
