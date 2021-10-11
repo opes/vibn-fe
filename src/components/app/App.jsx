@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import UserProfile from '../displays/UserProfile';
-import Signin from './Signin';
+import Signin from '../displays/Signin';
 
 export default function App() {
   return (
