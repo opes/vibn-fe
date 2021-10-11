@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+}
+
+.signin_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.signin_btn {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: blueviolet;
+    padding: 1rem;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border: 2px blueviolet double;
+}
+
+.signin_btn:hover {
+    cursor: pointer;
+    border: 2px rgb(104, 104, 104) double;
+}
+
+.vibn {
+    color: blueviolet;
+    font-size: 5rem;
+    padding: 3rem;
+}
+
+.vibn_desc {
+    color: rgb(128, 0, 255);
+    font-style: italic;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+}

@@ -8,7 +8,7 @@ export default function App() {
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/signin" component={Signin} />
+          <Route exact path="/" component={Signin} />
           <Route exact path="/user/dash/:access_token/:refresh_token" component={UserProfile} />
         </Switch>
       </BrowserRouter>

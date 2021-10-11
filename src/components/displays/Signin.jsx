@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/signin.css';
 
 export default function Login() {
   const handleSubmit = (event) => {
@@ -7,9 +8,11 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className={styles.signin_body}>
+      <h2 className={styles.vibn}>vibn</h2>
+      <p className={styles.vibn_desc}>Find your music match</p>
       <form onSubmit={handleSubmit}>
-        <button>Sign in with Spotify</button>
+        <button className={styles.signin_btn}>Sign in with Spotify</button>
       </form>
     </div>
   );
