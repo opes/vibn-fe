@@ -8,8 +8,13 @@ import icon from '../../assets/spotify-icon.png';
 import Header from './Header';
 
 export default function UserProfile({ match }) {
+  // first we set the tokens to local storage
+  localStorage.setItem('REFRESH_TOKEN', match.params.refresh_token);
+  localStorage.setItem('ACCESS_TOKEN', match.params.access_token);
+
+  // then we update state
   const { userObject, loading } = useUsers();
-  const { artists } = useArtists(match.params.access_token);
+  const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -25,13 +30,13 @@ export default function UserProfile({ match }) {
           src={userObject.image}
         />
         <h2 className={styles.profile_name}>
-          Welcome, {userObject.displayName}!
+        Welcome, {userObject.displayName}!
         </h2>
         <a href={userObject.profileURL} className={styles.profile_link}>
           <img className={styles.spotify_icon} src={icon} alt="Go to your Spotify" />
         </a>
       </section>
-      
+
       <img src={linebreak} alt="linebreak" />
 
       <h3 className={styles.top_label}>Your Top Artists</h3>
