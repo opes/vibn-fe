@@ -8,8 +8,14 @@ import icon from '../../assets/spotify-icon.png';
 import Header from './Header';
 
 export default function UserProfile({ match }) {
+  // first we set the tokens to local storage
+  localStorage.setItem('REFRESH_TOKEN', match.params.refresh_token);
+  localStorage.setItem('ACCESS_TOKEN', match.params.access_token);
+
+  // then we update state
   const { userObject, loading } = useUsers();
-  const { artists } = useArtists(match.params.access_token);
+  const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
+
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -55,6 +61,26 @@ export default function UserProfile({ match }) {
             : 'unavailable'}
         </ul>
       </section>
+    <div>
+      <img alt="user image" src={userObject.image} />
+      <h2>Welcome, {userObject.displayName}!</h2>
+      <a href={userObject.profileURL}>Spotify profile</a>
+
+      <h3>Your Top Artists</h3>
+      <ul>
+        {userObject
+          ? artists.map((artist) => (
+            <li key={artist.id}>
+              <a href={artist.url}>
+                <div>{artist.name}</div>
+              </a>
+              <img src={artist.images[1].url} />
+              <p>{artist.genres}</p>
+            </li>
+          ))
+          : 'unavailable'}
+        ;
+      </ul>
     </div>
   );
 }
@@ -65,6 +91,7 @@ UserProfile.propTypes = {
       name: PropTypes.string,
       image: PropTypes.string,
       spotify: PropTypes.string,
+      url: PropTypes.string,
       id: PropTypes.string,
       genres: PropTypes.string,
     })
