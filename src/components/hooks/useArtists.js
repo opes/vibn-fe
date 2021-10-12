@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchTopArtists } from '../services/spotifyAPI';
+import { fetchTopArtists } from '../../services/spotifyAPI';
 
 export default function useArtists(token) {
   const [artists, setArtists] = useState([]);

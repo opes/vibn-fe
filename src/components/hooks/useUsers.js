@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchCurrentUser } from '../services/userAuth';
+import { fetchCurrentUser } from '../../services/userAuth';
 
 export default function useUsers() {
   const [userObject, setUserObject] = useState(null);
