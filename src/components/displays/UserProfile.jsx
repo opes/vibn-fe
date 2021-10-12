@@ -5,6 +5,7 @@ import useArtists from '../hooks/useArtists';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
 import icon from '../../assets/spotify-icon.png';
+import Header from './Header';
 
 export default function UserProfile({ match }) {
   const { userObject, loading } = useUsers();
@@ -16,7 +17,7 @@ export default function UserProfile({ match }) {
 
   return (
     <div className={styles.profile_main}>
-
+      <Header />
       <section className={styles.profile}>
         <img
           className={styles.profile_pic}
