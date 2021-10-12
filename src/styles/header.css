@@ -1,0 +1,28 @@
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.aicon, .bicon, .cicon {
+    height: 7vmin;
+    width:7vmin;
+    padding: 10px;
+}
+
+.aicon:hover, .bicon:hover, .cicon:hover {
+    border-radius: 20px;
+    background-color: rgb(0, 119, 223);
+    border: none;
+    box-shadow: 2px 2px 10px 5px rgb(0, 119, 223);
+}
