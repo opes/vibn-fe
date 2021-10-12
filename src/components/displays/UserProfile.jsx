@@ -3,8 +3,8 @@ import useUsers from '../hooks/useUsers';
 import PropTypes from 'prop-types';
 import useArtists from '../hooks/useArtists';
 import styles from '../../styles/profile.css';
-import linebreak from '../../styles/linebreak.png';
-import icon from '../../styles/spotify-icon.png';
+import linebreak from '../../assets/linebreak.png';
+import icon from '../../assets/spotify-icon.png';
 
 export default function UserProfile({ match }) {
   const { userObject, loading } = useUsers();
