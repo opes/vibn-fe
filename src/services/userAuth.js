@@ -1,4 +1,4 @@
-const URL = 'http://localhost:7890/api/v1/auth/verify';
+const URL = 'https://vibn.herokuapp.com/api/v1/auth/verify';
 
 export const fetchCurrentUser = async () => {
   const res = await fetch(URL, {
