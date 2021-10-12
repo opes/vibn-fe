@@ -1,7 +1,7 @@
 import React from 'react';
-import useUsers from '../hooks/useUsers';
+import useUsers from '../../hooks/useUsers';
 import PropTypes from 'prop-types';
-import useArtists from '../hooks/useArtists';
+import useArtists from '../../hooks/useArtists';
 
 export default function UserProfile({ match }) {
   // first we set the tokens to local storage
