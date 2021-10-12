@@ -4,7 +4,7 @@ import styles from '../../styles/signin.css';
 export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    window.location.href = 'https://vibn.netlify.app/api/v1/auth/login';
+    window.location.href = 'https://vibn.herokuapp.com/api/v1/auth/login';
   };
 
   return (
