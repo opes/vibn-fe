@@ -15,6 +15,6 @@ export const fetchTopArtists = async (token) => {
 
 export const tokenRefresh = async (refresh_token) => {
   return fetch(
-    `http://localhost:7890/api/v1/auth/refresh_token?refresh_token=${refresh_token}`
+    `https://vibn.herokuapp.com/api/v1/auth/refresh_token?refresh_token=${refresh_token}`
   ).then((res) => res.json());
 };
