@@ -14,6 +14,7 @@ export default function UserProfile({ match }) {
 
   // then we update state
   const { userObject, loading } = useUsers();
+  console.log(userObject ? userObject : 'literally THIS'); 
   const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
   if (loading) {
