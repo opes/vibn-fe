@@ -4,8 +4,13 @@ import PropTypes from 'prop-types';
 import useArtists from '../hooks/useArtists';
 
 export default function UserProfile({ match }) {
+  // first we set the tokens to local storage
+  localStorage.setItem('REFRESH_TOKEN', match.params.refresh_token);
+  localStorage.setItem('ACCESS_TOKEN', match.params.access_token);
+
+  // then we update state
   const { userObject, loading } = useUsers();
-  const { artists } = useArtists(match.params.access_token);
+  const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
   if (loading) {
     return <h1>Loading...</h1>;
