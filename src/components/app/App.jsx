@@ -15,13 +15,13 @@ export default function App() {
           <Route exact path="/" component={Signin} />
           <Route exact path="/user/continue/:id/:access_token/:refresh_token" component={LoggedIn} />
           <Route exact path="/user/:id/dash" component={UserProfile} />
-          <Route exact path="/users">
+          <Route exact path="/user/:id/users">
             <UserList />
           </Route>
-          <Route exact path="/users/:id">
+          <Route exact path="/user/:id/users/:userid">
             <UserDetail />
           </Route>
-          <Route exact path="/conversations">
+          <Route exact path="/user/:id/conversations">
             <Conversations />
           </Route>
         </Switch>
