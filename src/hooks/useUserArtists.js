@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-// import { fetchTopArtists } from '../services/spotifyAPI';
 import { fetchUserArtists } from '../services/userAuth';
 
 export default function useUserArtists(id) {
@@ -7,7 +6,7 @@ export default function useUserArtists(id) {
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
-    fetchUserArtists(id)
+    fetchTopArtists(id)
       .then((userArtistArray) => setUserArtists(userArtistArray))
       .finally(() => setloading(false));
   }, []);

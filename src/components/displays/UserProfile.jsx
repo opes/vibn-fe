@@ -66,7 +66,6 @@ export default function UserProfile() {
                     {artist.name}
                   </a>
                 </p>
-                {/* <p className={styles.genres}>{artist.genres}</p> */}
               </li>
             ))
             : 'unavailable'}
