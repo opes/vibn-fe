@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import UserProfile from '../displays/UserProfile';
 import Signin from '../displays/Signin';
 import UserList from '../displays/UserList';
-import UserDetail from '../displays/UserDetail';
+// import UserDetail from '../displays/UserDetail';
 import Conversations from '../displays/Conversations';
 import LoggedIn from '../displays/LoggedIn';
 import About from '../displays/About';
@@ -19,9 +19,9 @@ export default function App() {
           <Route exact path="/user/:id/users">
             <UserList />
           </Route>
-          <Route exact path="/user/:id/users/:userid">
+          {/* <Route exact path="/user/:id/users/:userid">
             <UserDetail />
-          </Route>
+          </Route> */}
           <Route exact path="/user/:id/conversations">
             <Conversations />
           </Route>

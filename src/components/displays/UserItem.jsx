@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../../styles/userlist.css';
 import PropTypes from 'prop-types';
 import { useUsers } from '../../hooks/useUsers';
+import { userArtists } from '../../hooks/useArtists';
 
 export default function UserItem() {
     const { user, loading } = useUsers();
@@ -28,7 +29,6 @@ export default function UserItem() {
       </div>
     );
   }
-}
 
 UserItem.propTypes = {
   users: PropTypes.arrayOf(
@@ -42,3 +42,4 @@ UserItem.propTypes = {
     })
   ),
 };
+

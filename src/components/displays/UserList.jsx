@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import useUsers from '../hooks/useUsers';
+import React from 'react';
+import useUsers from '../../hooks/useUsers';
 import Header from './Header';
 import styles from '../../styles/userlist.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import useArtists from '../../hooks/useArtists';
+// import useArtists from '../../hooks/useArtists';
 import UserItem from './UserItem';
 
 export default function UserList() {
   const { users, loading } = useUsers();
-  const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
+  // const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
   // const hideUser = users.map((users) => users.id);
 
   if (loading) return <h1>Loading...</h1>;
@@ -48,8 +48,8 @@ UserList.propTypes = {
   ),
   match: PropTypes.shape({
     params: PropTypes.shape({
-      access_token: PropTypes.string.isRequired,
-      refresh_token: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
+      access_token: PropTypes.string,
+      refresh_token: PropTypes.string,
+    })
+  })
 };
