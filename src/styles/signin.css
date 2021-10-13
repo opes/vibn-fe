@@ -28,9 +28,9 @@ html, body {
     border: 2px rgb(104, 104, 104) double;
 }
 
-.vibn {
-    color: blueviolet;
-    font-size: 5rem;
+.vibn_logo {
+    width: 42vmin;
+    height: 34vmin;
     padding: 3rem;
 }
 

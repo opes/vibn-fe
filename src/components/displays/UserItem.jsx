@@ -3,7 +3,6 @@ import styles from '../../styles/userlist.css';
 import PropTypes from 'prop-types';
 
 export default function UserItem({ displayName, image }) {
-
   return (
     <div>
       <section className={styles.user_info}>
