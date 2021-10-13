@@ -15,9 +15,9 @@ export default function ConvoItem({ item, id }) {
   useEffect(() => {
     fetchCurrentUserById(item.toUser)
       .then((user) => setToUser(user))
-      .finally(fetchCurrentUserById(id)
-        .then((currentUser) => setFromUser(currentUser))
-        .finally(() => setLoading(false)));
+      .then(fetchCurrentUserById(id))
+      .then((currentUser) => setFromUser(currentUser))
+      .finally(() => setLoading(false));
   }, []);
 
   return (
@@ -39,7 +39,6 @@ export default function ConvoItem({ item, id }) {
     </Link>
   );
 }
-
 
 ConvoItem.propTypes = {
   item: PropTypes.shape({
