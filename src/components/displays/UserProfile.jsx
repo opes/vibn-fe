@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
@@ -10,23 +10,29 @@ import { postUserArtists } from '../../services/userAuth';
 
 export default function UserProfile() {
   const { userObject, loading } = useLoggedInUser();
-  const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
+  const { artistsArray } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
-  const userArtistJoin = async (id) => {
-    const res = await fetch(`http://localhost:7890/api/v1/user/artists/${id}/topart`);
-    const userArtists = await res.json();
+  userObject && console.log(artistsArray);
 
-    return userArtists;
-  };
+  useEffect(() => {
+    postUserArtists(artistsArray);
+  }, [artistsArray]);
 
-  if (userObject) {
-    if(!(userArtistJoin(userObject.id))) {
+  // const userArtistJoin = async (id) => {
+  //   const res = await fetch(`http://localhost:7890/api/v1/user/artists/${id}/topart`);
+  //   const userArtists = await res.json();
+
+  //   return userArtists;
+  // };
+
+  // if (userObject) {
+  //   if(!(userArtistJoin(userObject.id))) {
       
-      postUserArtists(artists);
-    } else {
-      console.log('waiting for user...');
-    }
-  }
+  //     postUserArtists(artists);
+  //   } else {
+  //     console.log('waiting for user...');
+  //   }
+  // }
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -56,7 +62,7 @@ export default function UserProfile() {
       <section className={styles.artists_container}>
         <ul className={styles.artists_list}>
           {userObject
-            ? artists.map((artist) => (
+            ? artistsArray.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
                 <p>
                   <img className={styles.artist_img} src={artist.images[1].url} />

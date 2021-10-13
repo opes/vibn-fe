@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchTopArtists } from '../services/spotifyAPI';
 
 export default function useArtists(token) {
-  const [artists, setArtists] = useState([]);
+  const [artistsArray, setArtists] = useState([]);
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
@@ -11,5 +11,5 @@ export default function useArtists(token) {
       .finally(() => setloading(false));
   }, []);
 
-  return { artists, loading };
+  return { artistsArray, loading };
 }
