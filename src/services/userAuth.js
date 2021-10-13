@@ -1,5 +1,5 @@
-const URL = 'https://vibn.herokuapp.com/api/v1/';
-// const URL = 'http://localhost:7890/api/v1/';
+// const URL = 'https://vibn.herokuapp.com/api/v1/';
+const URL = 'http://localhost:7890/api/v1/';
 
 export const fetchCurrentUser = async () => {
   const res = await fetch(`${URL}auth/verify`, {
@@ -33,9 +33,13 @@ export const fetchUserArtists = async (id) => {
 };
 
 export const postUserArtists = async (payload) => {
-  const res = await fetch('https://vibn.herokuapp.com/api/v1/user/artists/', {
+
+  const res = await fetch('http://localhost:7890/api/v1/user/artists/', {
     method: 'POST',
-    body: JSON.stringify(payload),
+    body: JSON.stringify(payload)
+//   const res = await fetch('https://vibn.herokuapp.com/api/v1/user/artists/', {
+//     method: 'POST',
+//     body: JSON.stringify(payload),
   });
 
   const body = await res.json();

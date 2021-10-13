@@ -11,8 +11,11 @@ export default function Conversations() {
     }
   };
 
+//   const id = localStorage.getItem('CURRENT_USER_ID');
+//   const convos = fetchConvosByUserId(id);
   const currentUserId = localStorage.getItem('CURRENT_USER_ID');
   const convos = fetchConvosByUserId(currentUserId);
+
   const filteredConvos = convos.filter(filterById);
   setConversations(filteredConvos);
 
@@ -20,6 +23,9 @@ export default function Conversations() {
     <div>
       <h1>Your Messages</h1>
       <main>
+        {conversations.map((item) => (
+          <ConvoItem key={id} convo={item} />
+        ))}
         {conversations.map(item => 
           <ConvoItem 
             key={currentUserId}

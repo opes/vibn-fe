@@ -17,7 +17,9 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={Signin} />
           <Route exact path="/user/:id/:access_token/:refresh_token" component={LoggedIn} />
-          <Route exact path="/user/:id/dash" component={UserProfile} />
+          <Route exact path="/user/:id/dash">
+            <UserProfile />
+          </Route>
           <Route exact path="/users">
             <UserList />
           </Route>

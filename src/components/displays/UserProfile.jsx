@@ -55,7 +55,7 @@ export default function UserProfile() {
 
       <section className={styles.artists_container}>
         <ul className={styles.artists_list}>
-          {userObject
+          {artists
             ? artists.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
                 <p>
