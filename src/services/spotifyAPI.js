@@ -40,7 +40,7 @@ export const fetchTopArtists = async (token) => {
   if (data.item === undefined) {
     tokenRefresh(localStorage.getItem('REFRESH_TOKEN'));
   }
-  
-  console.log(data.items);
+
+  console.log(data);
   return data.items;
 };

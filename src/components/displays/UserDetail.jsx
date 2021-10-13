@@ -9,7 +9,9 @@ import Header from './Header';
 
 export default function UserProfile() {
   const { userObject, loading } = useUsers();
-  const { artists } = useArtists(localStorage.getItem('CURRENT_USER_ID'));
+  const { artists } = userObject && useArtists(userObject.id);
+  
+  userObject && localStorage.setItem('VIEWED_USER', userObject.id);
 
   if (loading) {
     return <h1>Loading...</h1>;
