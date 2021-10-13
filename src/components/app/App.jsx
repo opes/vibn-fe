@@ -13,7 +13,7 @@ export default function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Signin} />
-          <Route exact path="/user/continue/:id/:access_token/:refresh_token" component={LoggedIn} />
+          <Route exact path="/user/:id/:access_token/:refresh_token" component={LoggedIn} />
           <Route exact path="/user/:id/dash" component={UserProfile} />
           <Route exact path="/users">
             <UserList />
