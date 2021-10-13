@@ -1,0 +1,58 @@
+body { 
+--a-color: #f72585ff;
+--b-color: #b5179eff;
+--c-color: #7209b7ff;
+--d-color: #560badff;
+--e-color: #480ca8ff;
+--f-color: #3a0ca3ff;
+--g-color: #3f37c9ff;
+--h-color: #0361eeff;
+--i-color: #2895efff;
+--j-color: #4cc9f0ff;
+}
+
+.doods {
+    background-color: var(--f-color);
+}
+
+.users_container {
+    background-color: var(--j-color);
+}
+
+.userlist {
+    background-color: var(--b-color);
+}
+
+.user_info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 3rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.user_img {
+  max-height: 30vmin;
+  max-width: 30vmin;
+  border-radius: 200px;
+  border: 5px var(--b-color) solid;
+}
+
+.user_name {
+padding-bottom: 10px;
+  font-family: 'Permanent Marker';
+  font-size: 2rem;
+  text-shadow: 5px 8px 10px var(--h-color);
+}
+
+a:hover, .user_img:hover {
+    box-shadow: 2px 1px 25px var(--a-color);
+    background-color: var(--b-color);
+}
+
+a {
+  color: var(--e-color);
+  text-decoration: wavy;
+}

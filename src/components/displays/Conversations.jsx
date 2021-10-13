@@ -20,10 +20,9 @@ export default function Conversations() {
     <div>
       <h1>Your Messages</h1>
       <main>
-        {conversations.map(item => 
-          <ConvoItem 
-            key={id})} 
-            convo={item} />)}
+        {conversations.map((item) => (
+          <ConvoItem key={id} convo={item} />
+        ))}
       </main>
     </div>
   );
