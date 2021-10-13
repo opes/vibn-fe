@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from '../../styles/userlist.css';
 import PropTypes from 'prop-types';
 import { useUsers } from '../../hooks/useUsers';

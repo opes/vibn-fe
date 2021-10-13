@@ -43,20 +43,3 @@ export const fetchTopArtists = async (token) => {
 
   return data.items;
 };
-
-export const fetchUserArtists = async (id, token) => {
-  const res = await fetch(`https://open.spotify.com/user/${id}/top/artists`, {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-  });
-
-  const data = await res.json();
-  if (data.item === undefined) {
-    tokenRefresh(localStorage.getItem('REFRESH_TOKEN'));
-  }
-
-  return data.items;
-};

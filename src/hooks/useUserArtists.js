@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import { fetchTopArtists } from '../services/spotifyAPI';
+import { fetchUserArtists } from '../services/spotifyAPI';
 
-export default function useArtists(token) {
-  const [artists, setArtists] = useState([]);
+export default function useArtists(id) {
+  const [userArtists, setUserArtists] = useState([]);
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
-    fetchTopArtists(token)
-      .then((artistArray) => setArtists(artistArray))
+    fetchUserArtists(id)
+      .then((userArtistArray) => setUserArtists(userArtistArray))
       .finally(() => setloading(false));
   }, []);
 
-  return { artists, loading };
+  return { userArtists, loading };
 }
