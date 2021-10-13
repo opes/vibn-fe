@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 // import useUsers from '../hooks/useUsers';
 import Header from './Header';
 import styles from '../../styles/userlist.css';
-// import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default class UserList extends Component {
   render() {
     // const { userObject, loading } = useUsers(id);
+    const hideUser = users.map(users => users.)
 
     // if (loading) {
     //   return <h1>Loading...</h1>;
@@ -17,39 +18,28 @@ export default class UserList extends Component {
       <div>
         <Header />
         <h1 className={styles.doods}>List o&apos; doods</h1>
-      </div>
-    );
-  }
-  /* <section className={styles.users_container}>
-          <ul className={styles.users_list}>
-            {userObject
-              ? userObject.map((user) => (
-                <li className={styles.users_item} key={user.id}>
-                  <p>
+
+  <section className={styles.users_container}>
+            {userObject.map((user) => (
+
                     <Link to="/users/:id">
-                      <img
-                        className={styles.user_img}
-                        src={user.images[1].url}
+                      <UserItem 
+                        displayName={users.displayName}
+                        
                       />
-                      <p className={styles.user_name}>{user.name}</p>
                     </Link>
-                  </p>
-                </li>
-              ))
-              : 'unavailable'}
-          </ul>
-        </section>
+              ))}
+          </section>
       </div>
     );
   }
-// }
+};
 
 UserList.propTypes = {
-  artists: PropTypes.arrayOf(
+  users: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string,
+      displayName: PropTypes.string,
       image: PropTypes.string,
-      spotify: PropTypes.string,
       id: PropTypes.string,
       genres: PropTypes.string,
     })
@@ -60,5 +50,5 @@ UserList.propTypes = {
       refresh_token: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-}; */
+};
 }
