@@ -1,64 +1,55 @@
-import React, { Component } from 'react';
-// import useUsers from '../hooks/useUsers';
+import React from 'react';
+import useUsers from '../../hooks/useUsers';
 import Header from './Header';
 import styles from '../../styles/userlist.css';
-// import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+// import useArtists from '../../hooks/useArtists';
+import UserItem from './UserItem';
 
-export default class UserList extends Component {
-  render() {
-    // const { userObject, loading } = useUsers(id);
+export default function UserList() {
+  const { users, loading } = useUsers();
+  // const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
+  // const hideUser = users.map((users) => users.id);
 
-    // if (loading) {
-    //   return <h1>Loading...</h1>;
-    // }
+  if (loading) return <h1>Loading...</h1>;
 
-    return (
-      <div>
-        <Header />
-        <h1 className={styles.doods}>List o&apos; doods</h1>
-      </div>
-    );
-  }
-  /* <section className={styles.users_container}>
-          <ul className={styles.users_list}>
-            {userObject
-              ? userObject.map((user) => (
-                <li className={styles.users_item} key={user.id}>
-                  <p>
-                    <Link to="/users/:id">
-                      <img
-                        className={styles.user_img}
-                        src={user.images[1].url}
-                      />
-                      <p className={styles.user_name}>{user.name}</p>
-                    </Link>
-                  </p>
-                </li>
-              ))
-              : 'unavailable'}
-          </ul>
-        </section>
-      </div>
-    );
-  }
-// }
+  return (
+    <div>
+      <Header />
+      <h1 className={styles.doods}>List o&apos; doods</h1>
+
+      <ul className={styles.users_container}>
+        {users.map((user) => (
+          <li className={styles.userlist} key={user.id}>
+            <Link to="/users/:id">
+              <UserItem
+                displayName={user.displayName}
+                image={user.image}
+                artist_a={user.artist_a}
+                artist_b={user.artist_b}
+              />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 UserList.propTypes = {
-  artists: PropTypes.arrayOf(
+  users: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string,
+      displayName: PropTypes.string,
       image: PropTypes.string,
-      spotify: PropTypes.string,
       id: PropTypes.string,
       genres: PropTypes.string,
     })
   ),
   match: PropTypes.shape({
     params: PropTypes.shape({
-      access_token: PropTypes.string.isRequired,
-      refresh_token: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-}; */
-}
+      access_token: PropTypes.string,
+      refresh_token: PropTypes.string,
+    })
+  })
+};

@@ -3,8 +3,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import UserProfile from '../displays/UserProfile';
 import Signin from '../displays/Signin';
 import UserList from '../displays/UserList';
-import UserDetail from '../displays/UserDetail';
+// import UserDetail from '../displays/UserDetail';
 import Conversations from '../displays/Conversations';
+import LoggedIn from '../displays/LoggedIn';
+import About from '../displays/About';
 
 export default function App() {
   return (
@@ -12,15 +14,19 @@ export default function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Signin} />
-          <Route exact path="/user/dash/:access_token/:refresh_token" component={UserProfile} />
-          <Route exact path="/users">
+          <Route exact path="/user/:id/:access_token/:refresh_token" component={LoggedIn} />
+          <Route exact path="/user/:id/dash" component={UserProfile} />
+          <Route exact path="/user/:id/users">
             <UserList />
           </Route>
-          <Route exact path="/users/:id">
+          {/* <Route exact path="/user/:id/users/:userid">
             <UserDetail />
-          </Route>
-          <Route exact path="/conversations">
+          </Route> */}
+          <Route exact path="/user/:id/conversations">
             <Conversations />
+          </Route>
+          <Route exact path="/about">
+            <About />
           </Route>
         </Switch>
       </BrowserRouter>
