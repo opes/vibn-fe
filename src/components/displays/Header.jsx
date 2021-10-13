@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import list_icon from '../../assets/user-list-icon.png';
 import logout_icon from '../../assets/logoout-icon.png';
+import cv_icon from '../../assets/conversation-icon.png';
 import profile_icon from '../../assets/profile-icon.png';
 import styles from '../../styles/header.css';
 
@@ -22,7 +23,7 @@ export default class Header extends Component {
           </div>
           <div className={styles.icon}>
             <Link to="/conversations">
-              <img className={styles.cvicon} src={logout_icon} />
+              <img className={styles.cvicon} src={cv_icon} />
             </Link>
           </div>
           <div className={styles.icon}>

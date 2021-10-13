@@ -9,7 +9,6 @@ import useUserArtists from '../../hooks/useUserArtists';
 export default function UserList() {
   const { users, loading } = useUsers();
   const { userArtists } = useUserArtists(localStorage.getItem('CURRENT_USER_ID'));
-  // const hideUser = users.map((users) => users.id);
 
   console.log(userArtists ? userArtists : 'the rain in spain stays mainly on the plane');
 
