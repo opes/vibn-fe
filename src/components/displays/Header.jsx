@@ -21,7 +21,7 @@ export default class Header extends Component {
             </Link>
           </div>
           <div className={styles.icon}>
-            <Link to="/user/dash/:access_token/:refresh_token">
+            <Link to="/user/:id/dash">
               <img className={styles.cicon} src={profile_icon} />
             </Link>
           </div>
