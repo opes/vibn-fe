@@ -4,11 +4,11 @@ import UserProfile from '../displays/UserProfile';
 import Signin from '../displays/Signin';
 import UserList from '../displays/UserList';
 // import UserDetail from '../displays/UserDetail';
-import Conversations from '../displays/Conversations';
+// import Conversations from '../displays/Conversations';
 import LoggedIn from '../displays/LoggedIn';
 import About from '../displays/About';
-import CreateConvo from '../displays/CreateConvo';
-import ConvoDetail from '../displays/ConvoDetail';
+// import CreateConvo from '../displays/CreateConvo';
+// import ConvoDetail from '../displays/ConvoDetail';
 
 export default function App() {
   return (
@@ -17,26 +17,27 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={Signin} />
           <Route exact path="/user/:id/:access_token/:refresh_token" component={LoggedIn} />
-          <Route exact path="/user/:id/dash" component={UserProfile} />
+          <Route exact path="/user/:id/dash">
+            <UserProfile />
+          </Route>
           <Route exact path="/users">
             <UserList />
           </Route>
-          {/* <Route exact path="/user/:id/users/:userid">
-          <Route exact path="/user/users/:userid">
+          {/* <Route exact path="/user/users/:userid">
             <UserDetail />
           </Route> */}
-          <Route exact path="/user/:id/conversations">
+          {/* <Route exact path="/user/:id/conversations">
             <Conversations />
-          </Route>
+          </Route> */}
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/user/create/convo/:id">
+          {/* <Route exact path="/user/create/convo/:id">
             <CreateConvo />
           </Route>
           <Route exact path="/user/convo/detail/:id">
             <ConvoDetail />
-          </Route>
+          </Route> */}
         </Switch>
       </BrowserRouter>
     </div>

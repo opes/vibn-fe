@@ -11,26 +11,40 @@ body {
 --j-color: #4cc9f0ff;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
 .doods {
-    background-color: var(--f-color);
+    color: var(--a-color);
+    font-family: 'Permanent Marker';
+    font-size: 3rem;
+    text-align: center;
 }
 
 .users_container {
-    background-color: var(--j-color);
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    background-color: black;
 }
 
 .userlist {
-    background-color: var(--b-color);
+    display: flex;
+    flex-direction: row;
 }
 
 .user_info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   list-style-type: none;
   padding: 3rem;
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 .user_img {
@@ -38,6 +52,7 @@ body {
   max-width: 30vmin;
   border-radius: 200px;
   border: 5px var(--b-color) solid;
+  margin: 5px;
 }
 
 .user_name {
@@ -47,12 +62,8 @@ padding-bottom: 10px;
   text-shadow: 5px 8px 10px var(--h-color);
 }
 
-a:hover, .user_img:hover {
-    box-shadow: 2px 1px 25px var(--a-color);
-    background-color: var(--b-color);
-}
-
-a {
-  color: var(--e-color);
-  text-decoration: wavy;
+.user_img:hover {
+    box-shadow: 2px 2px 30px 25px var(--i-color);
+    border-radius: 200px;
+    background-color: var(--f-color);
 }
