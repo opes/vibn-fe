@@ -21,6 +21,11 @@ export default class Header extends Component {
             </Link>
           </div>
           <div className={styles.icon}>
+            <Link to="/conversations">
+              <img className={styles.cvicon} src={logout_icon} />
+            </Link>
+          </div>
+          <div className={styles.icon}>
             <Link to="/user/:id/dash">
               <img className={styles.cicon} src={profile_icon} />
             </Link>
