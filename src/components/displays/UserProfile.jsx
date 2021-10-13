@@ -6,16 +6,19 @@ import linebreak from '../../assets/linebreak.png';
 import icon from '../../assets/spotify-icon.png';
 import Header from './Header';
 import useLoggedInUser from '../../hooks/useLoggedInUser';
+import { postUserArtists } from '../../services/userAuth';
 
 export default function UserProfile() {
   const { userObject, loading } = useLoggedInUser();
   const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
+  artists ? postUserArtists(artists) : 'go to sleep';
+
   if (loading) {
     return <h1>Loading...</h1>;
   }
 
-  console.log(artists);
+  // console.log(artists);
 
   return (
     <div className={styles.profile_main}>

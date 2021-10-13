@@ -7,9 +7,9 @@ import linebreak from '../../assets/linebreak.png';
 import icon from '../../assets/spotify-icon.png';
 import Header from './Header';
 
-export default function UserProfile({ match }) {
+export default function UserProfile() {
   const { userObject, loading } = useUsers();
-  const { artists } = useArtists(match.params.access_token);
+  const { artists } = useArtists(localStorage.getItem('CURRENT_USER_ID'));
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -69,10 +69,4 @@ UserProfile.propTypes = {
       genres: PropTypes.string,
     })
   ),
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      access_token: PropTypes.string.isRequired,
-      refresh_token: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
 };
