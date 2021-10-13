@@ -22,7 +22,6 @@ export default function LoggedIn({ match }) {
     window.location.href = 'http://localhost:7891/user/:id/dash';
   };
 
-
   return (
     <div>
       <form onSubmit={handleSubmit}>

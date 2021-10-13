@@ -7,13 +7,12 @@ import UserItem from './UserItem';
 import useListOfUsers from '../../hooks/useListOfUsers';
 // import useUserArtists from '../../hooks/useUserArtists';
 
-
 export default function UserList() {
   const { allUsers, loading } = useListOfUsers();
-  // const { userArtists } = useUserArtists(localStorage.getItem('CURRENT_USER_ID'));
-  // const hideUser = users.map((users) => users.id);
+//   const { users, loading } = useUsers();
+//   const { userArtists } = useUserArtists(localStorage.getItem('CURRENT_USER_ID'));
+//   console.log(userArtists ? userArtists : 'the rain in spain stays mainly on the plane');
 
-  // console.log(userArtists ? userArtists : 'the rain in spain stays mainly on the plane');
 
   if (loading) return <h1>Loading...</h1>;
 
@@ -46,10 +45,4 @@ UserList.propTypes = {
       id: PropTypes.string,
     })
   ),
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      access_token: PropTypes.string,
-      refresh_token: PropTypes.string,
-    })
-  })
 };

@@ -18,7 +18,6 @@ export default function UserItem() {
       </section>
     </div>
   );
-}
 
 UserItem.propTypes = {
   users: PropTypes.arrayOf(
