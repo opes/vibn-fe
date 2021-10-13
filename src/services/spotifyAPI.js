@@ -41,5 +41,6 @@ export const fetchTopArtists = async (token) => {
     tokenRefresh(localStorage.getItem('REFRESH_TOKEN'));
   }
 
+  console.log('------top artists------', data.items);
   return data.items;
 };
