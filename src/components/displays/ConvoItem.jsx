@@ -1,45 +1,53 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchCurrentUserById } from '../../services/userAuth';
 import PropTypes from 'prop-types';
 
-export default class ConvoItem extends Component {
+export default function ConvoItem({ item, id }) {
+  const [toUser, setToUser] = useState({});
+  const [fromUser, setFromUser] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  state = {
-    toUser: {},
-    fromUser: {},
+  if (loading) {
+    return <h1>Loading...</h1>;
   }
 
-  componentDidMount = async () => {
-    const id = this.props.convo.toUser;
-    const fromUserId = this.props.convo.fromUser;
-    const toUser = await fetchCurrentUserById(id);
-    const fromUser = await fetchCurrentUserById(fromUserId);
-    this.setState({ toUser, fromUser });
-  }
+  useEffect(() => {
+    fetchCurrentUserById(item.toUser)
+      .then((user) => setToUser(user))
+      .finally(fetchCurrentUserById(id)
+        .then((currentUser) => setFromUser(currentUser))
+        .finally(() => setLoading(false)));
+  }, []);
 
-  render() {
-    return (
-      <Link to={`/user/convo/detail/${this.props.convo.id}`}>
-        <div>
-          <h4>
-            from: {this.state.fromUser.displayName}
-            to: {this.state.toUser.displayName}
-          </h4>
-        </div>
-        <article>
-          <h2>
-            {this.props.convo.date}
-          </h2>
-          <p>
-            {this.props.convo.message}
-          </p>
-        </article>        
-      </Link>
-    );
-  }
+  return (
+    <Link to={`/user/convo/detail/${item.id}`}>
+      <div>
+        <h4>
+            from: {fromUser.displayName}
+            to: {toUser.displayName}
+        </h4>
+      </div>
+      <article>
+        <h2>
+          {item.date}
+        </h2>
+        <p>
+          {item.message}
+        </p>
+      </article>        
+    </Link>
+  );
 }
 
+
 ConvoItem.propTypes = {
-  convo: PropTypes.object,
+  item: PropTypes.shape({
+    id: PropTypes.string,
+    toUser: PropTypes.string,
+    fromUser: PropTypes.string,
+    message: PropTypes.string,
+    date: PropTypes.string,
+  }),
+  id: PropTypes.string,
 };
