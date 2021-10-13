@@ -19,12 +19,13 @@ export default function UserItem() {
     </div>
   );
 
-UserItem.propTypes = {
-  users: PropTypes.arrayOf(
-    PropTypes.shape({
-      displayName: PropTypes.string,
-      image: PropTypes.string,
-      id: PropTypes.string,
-    })
-  ),
-};
+  UserItem.propTypes = {
+    users: PropTypes.arrayOf(
+      PropTypes.shape({
+        displayName: PropTypes.string,
+        image: PropTypes.string,
+        id: PropTypes.string,
+      })
+    ),
+  };
+}
