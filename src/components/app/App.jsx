@@ -6,6 +6,7 @@ import UserList from '../displays/UserList';
 import UserDetail from '../displays/UserDetail';
 import Conversations from '../displays/Conversations';
 import LoggedIn from '../displays/LoggedIn';
+import About from '../displays/About';
 
 export default function App() {
   return (
@@ -23,6 +24,9 @@ export default function App() {
           </Route>
           <Route exact path="/user/:id/conversations">
             <Conversations />
+          </Route>
+          <Route exact path="/about">
+            <About />
           </Route>
         </Switch>
       </BrowserRouter>
