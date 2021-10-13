@@ -14,13 +14,13 @@ header {
     width: 100%;
 }
 
-.aicon, .bicon, .cicon {
+.aicon, .bicon, .cicon, .cvicon {
     height: 7vmin;
     width:7vmin;
     padding: 10px;
 }
 
-.aicon:hover, .bicon:hover, .cicon:hover {
+.aicon:hover, .bicon:hover, .cicon:hover, .cvicon:hover {
     border-radius: 20px;
     background-color: rgb(0, 119, 223);
     border: none;
