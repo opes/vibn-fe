@@ -1,5 +1,4 @@
 import React from 'react';
-// import useUsers from '../../hooks/useUsers';
 import PropTypes from 'prop-types';
 import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
@@ -9,16 +8,8 @@ import Header from './Header';
 import useLoggedInUser from '../../hooks/useLoggedInUser';
 
 export default function UserProfile() {
-  // first we set the tokens to local storage
-  // localStorage.setItem('REFRESH_TOKEN', match.params.refresh_token);
-  // localStorage.setItem('ACCESS_TOKEN', match.params.access_token);
-
-  // then we update state
   const { userObject, loading } = useLoggedInUser();
   const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
-
-  // console.log('DA USERZZZZZZZ');
-  // console.log(userObject ? userObject : 'you suck');
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -78,10 +69,4 @@ UserProfile.propTypes = {
       genres: PropTypes.string,
     })
   ),
-  // match: PropTypes.shape({
-  //   params: PropTypes.shape({
-  //     access_token: PropTypes.string.isRequired,
-  //     refresh_token: PropTypes.string.isRequired,
-  //   }).isRequired,
-  // }).isRequired,
 };
