@@ -49,9 +49,9 @@ export default function ConvoDetail({ match }) {
 ConvoDetail.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      access_token: PropTypes.string.isRequired,
-      refresh_token: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
+      access_token: PropTypes.string,
+      refresh_token: PropTypes.string,
+      id: PropTypes.string,
+    }),
+  }),
 };
