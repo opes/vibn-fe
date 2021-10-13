@@ -13,7 +13,7 @@ export default function UserProfile() {
   const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
   const userArtistJoin = async (id) => {
-    const res = await fetch(`http://localhost:7890/api/v1/user/artists/${id}/topart`);
+    const res = await fetch(`https://vibn.herokuapp.com/api/v1/user/artists/${id}/topart`);
     const userArtists = await res.json();
 
     return userArtists;
