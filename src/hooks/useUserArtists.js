@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { fetchUserArtists } from '../services/spotifyAPI';
+// import { fetchTopArtists } from '../services/spotifyAPI';
+import { fetchUserArtists } from '../services/userAuth';
 
-export default function useArtists(id) {
+export default function useUserArtists(id) {
   const [userArtists, setUserArtists] = useState([]);
   const [loading, setloading] = useState(true);
 

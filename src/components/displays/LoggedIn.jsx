@@ -18,10 +18,9 @@ export default function LoggedIn({ match }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    window.location.href = 'https://vibn.netlify.app/user/:id/dash';
-    // window.location.href = 'http://localhost:7891/user/:id/dash';
+    // window.location.href = 'https://vibn.netlify.app/user/:id/dash';
+    window.location.href = 'http://localhost:7891/user/:id/dash';
   };
-
 
   return (
     <div>

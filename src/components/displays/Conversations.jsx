@@ -1,7 +1,30 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { fetchConvosByUserId } from '../../services/convos';
+import ConvoItem from './ConvoItem';
 
-export default class Conversations extends Component {
-  render() {
-    return <div>conversation list</div>;
-  }
+export default function Conversations() {
+  const [conversations, setConversations] = useState([]);
+
+  const filterById = (item) => {
+    if (item.toUser === localStorage.getItem('CURRENT_USER_ID')) {
+      return true;
+    }
+  };
+
+  const currentUserId = localStorage.getItem('CURRENT_USER_ID');
+  const convos = fetchConvosByUserId(currentUserId);
+  const filteredConvos = convos.filter(filterById);
+  setConversations(filteredConvos);
+
+  return (
+    <div>
+      <h1>Your Messages</h1>
+      <main>
+        {conversations.map(item => 
+          <ConvoItem 
+            key={currentUserId}
+            convo={item} id={currentUserId} />)}
+      </main>
+    </div>
+  );
 }
