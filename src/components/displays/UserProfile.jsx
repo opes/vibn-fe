@@ -15,6 +15,8 @@ export default function UserProfile() {
     return <h1>Loading...</h1>;
   }
 
+  console.log(artists);
+
   return (
     <div className={styles.profile_main}>
       <Header />
