@@ -29,6 +29,8 @@ export default function CreateConvo({ match }) {
     });
 
     window.location.href = `http://localhost:7891/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`;
+//     window.location.href = `https://vib.netlify.app/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`;
+
   };
 
   const handleTextChange = async (event) => {

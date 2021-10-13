@@ -1,5 +1,10 @@
 export const fetchConvosByUserId = async (id) => {
   const res = await fetch(`http://localhost:7890/api/v1/user/convos/${id}/convo`);
+
+//   const res = await fetch(
+//     `https://vibn.herokuapp.com/api/v1/user/convos/${id}/convo`
+//   );
+
   const userAndConvos = await res.json();
 
   return userAndConvos;
@@ -7,6 +12,8 @@ export const fetchConvosByUserId = async (id) => {
 
 export const postToConvos = async (payload) => {
   const res = await fetch('http://localhost:7890/api/v1/user/convos/', {
+//   const res = await fetch('https://vibn.herokuapp.com/api/v1/user/convos/', {
+
     method: 'POST',
     body: payload,
   });
@@ -16,6 +23,10 @@ export const postToConvos = async (payload) => {
 
 export const getSingleConvo = async (id) => {
   const res = await fetch(`http://localhost:/7890/api/v1/convos/${id}/convo`);
+//   const res = await fetch(
+//     `https://vibn.herokuapp.com/api/v1/convos/${id}/convo`
+//   );
+
   const singleConvo = await res.json();
 
   return singleConvo;

@@ -34,7 +34,6 @@ html, body {
 .userlist {
     display: flex;
     flex-direction: row;
-}
 
 .user_info {
   display: flex;
@@ -67,3 +66,5 @@ padding-bottom: 10px;
     border-radius: 200px;
     background-color: var(--f-color);
 }
+
+

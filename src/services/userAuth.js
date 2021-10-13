@@ -14,7 +14,7 @@ export const fetchCurrentUser = async () => {
 export const fetchAllUsers = async () => {
   const res = await fetch(`${URL}users`);
   const userList = await res.json();
-  console.log('---userlist---', userList);
+
   return userList;
 };
 
@@ -33,9 +33,13 @@ export const fetchUserArtists = async (id) => {
 };
 
 export const postUserArtists = async (payload) => {
+
   const res = await fetch('http://localhost:7890/api/v1/user/artists/', {
     method: 'POST',
     body: JSON.stringify(payload)
+//   const res = await fetch('https://vibn.herokuapp.com/api/v1/user/artists/', {
+//     method: 'POST',
+//     body: JSON.stringify(payload),
   });
 
   const body = await res.json();
