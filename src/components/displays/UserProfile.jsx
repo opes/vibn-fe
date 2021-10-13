@@ -6,27 +6,11 @@ import linebreak from '../../assets/linebreak.png';
 import icon from '../../assets/spotify-icon.png';
 import Header from './Header';
 import useLoggedInUser from '../../hooks/useLoggedInUser';
-import { postUserArtists } from '../../services/userAuth';
+// import { postUserArtists } from '../../services/userAuth';
 
 export default function UserProfile() {
   const { userObject, loading } = useLoggedInUser();
   const { artists } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
-
-  const userArtistJoin = async (id) => {
-    const res = await fetch(`http://localhost:7890/api/v1/user/artists/${id}/topart`);
-    const userArtists = await res.json();
-
-    return userArtists;
-  };
-
-  if (userObject) {
-    if(!(userArtistJoin(userObject.id))) {
-      
-      postUserArtists(artists);
-    } else {
-      console.log('waiting for user...');
-    }
-  }
 
   if (loading) {
     return <h1>Loading...</h1>;

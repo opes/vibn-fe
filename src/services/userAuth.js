@@ -35,8 +35,8 @@ export const fetchUserArtists = async (id) => {
 export const postUserArtists = async (payload) => {
   const res = await fetch('http://localhost:7890/api/v1/user/artists/', {
     method: 'POST',
-    body: JSON.stringify(payload)
-  });
+    body: payload,
+  })
 
   const body = await res.json();
   return body;
