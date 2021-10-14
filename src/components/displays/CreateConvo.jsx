@@ -28,8 +28,8 @@ export default function CreateConvo({ match }) {
       date: today,
     });
 
-    window.location.href = `http://localhost:7891/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`;
-    // window.location.href = `https://vib.netlify.app/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`;
+    // window.location.href = `http://localhost:7891/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`;
+    window.push.href = `https://vib.netlify.app/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`;
 
   };
 
