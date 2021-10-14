@@ -19,8 +19,8 @@ export default function UserList() {
   return (
     <div>
       <Header />
-      <h1 className={styles.doods}>List o&apos; doods</h1>
-      <img src={linebreak} alt="Line break" />
+      <h1 className={styles.doods}>Find Your Music Match</h1>
+      <img src={linebreak} alt="Line break" className={styles.linebreak} />
       <ul className={styles.users_container}>
         {allUsers.map((user) => (
           <li className={styles.userlist} key={user.id}>

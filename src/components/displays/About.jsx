@@ -11,7 +11,7 @@ export default class About extends Component {
       <div className={styles.about_container}>
         <Header />
         <h1 className={styles.about_title}>We&apos;re Vibn</h1>
-        <img src={linebreak} alt="linebreak" />
+        <img src={linebreak} alt="linebreak" className={styles.linebreak} />
         <section className={styles.bri}>
           <h1 className={styles.bio_name}>Bri</h1>
           <p className={styles.bio}>

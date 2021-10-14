@@ -37,7 +37,7 @@ export default function UserProfile() {
         </a>
       </section>
 
-      <img src={linebreak} alt="linebreak" />
+      <img src={linebreak} alt="linebreak" className={styles.linebreak} />
 
       <h3 className={styles.top_label}>Your Top Artists</h3>
 
