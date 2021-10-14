@@ -60,6 +60,7 @@ export default function UserDetail() {
               </li>
             ))
             : 'No Top Artists Found'}
+
         </ul>
       </section>
     </div>
