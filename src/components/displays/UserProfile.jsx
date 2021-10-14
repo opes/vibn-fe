@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
-import icon from '../../assets/spotify-icon.png';
 import Header from './Header';
 import useLoggedInUser from '../../hooks/useLoggedInUser';
 import { postUserArtists } from '../../services/userAuth';
+import logo from '../../assets/spotify-icon.png';
 
 export default function UserProfile() {
   const { userObject, loading } = useLoggedInUser();
@@ -32,7 +32,7 @@ export default function UserProfile() {
         Welcome, {userObject.displayName}!
         </h2>
         <a href={userObject.profileURL} className={styles.profile_link}>
-          <img className={styles.spotify_icon} src={icon} alt="Go to your Spotify" />
+          <img src={logo} className={styles.spotify_icon} />
         </a>
       </section>
 

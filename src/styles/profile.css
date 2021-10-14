@@ -1,14 +1,14 @@
-body { 
---a-color: #f72585ff;
---b-color: #b5179eff;
---c-color: #7209b7ff;
---d-color: #560badff;
---e-color: #480ca8ff;
---f-color: #3a0ca3ff;
---g-color: #3f37c9ff;
---h-color: #0361eeff;
---i-color: #2895efff;
---j-color: #4cc9f0ff;
+body {
+  --a-color: #f72585ff;
+  --b-color: #b5179eff;
+  --c-color: #7209b7ff;
+  --d-color: #560badff;
+  --e-color: #480ca8ff;
+  --f-color: #3a0ca3ff;
+  --g-color: #3f37c9ff;
+  --h-color: #0361eeff;
+  --i-color: #2895efff;
+  --j-color: #4cc9f0ff;
 }
 
 html {
@@ -34,30 +34,32 @@ html {
   color: var(--i-color);
 }
 
-.profile_pic, .user_img {
-  border: 5px var(--a-color)  solid;
+.profile_pic,
+.user_img {
+  border: 5px var(--a-color) solid;
   margin-top: 8vmin;
   border-radius: 200px;
   align-self: center;
-  box-shadow: var(--a-color)  0 -1px 4px, var(--b-color)  0 -2px 50px,
-    var(--c-color)  0 -10px 50px, var(--d-color)  0 -18px 40px,
+  box-shadow: var(--a-color) 0 -1px 4px, var(--b-color) 0 -2px 50px,
+    var(--c-color) 0 -10px 50px, var(--d-color) 0 -18px 40px,
     7px 7px 9px 15px rgba(0, 0, 0, 0);
 }
 
 .user_img:hover {
-  border: 5px var(--j-color)  solid;
+  border: 5px var(--j-color) solid;
   margin-top: 8vmin;
   border-radius: 200px;
   align-self: center;
-  box-shadow: var(--i-color)  0 -1px 4px, var(--j-color)  0 -2px 50px,
-    var(--h-color)  0 -10px 50px, var(--g-color)  0 -18px 40px,
+  box-shadow: var(--i-color) 0 -1px 4px, var(--j-color) 0 -2px 50px,
+    var(--h-color) 0 -10px 50px, var(--g-color) 0 -18px 40px,
     7px 7px 9px 15px rgba(0, 0, 0, 0);
 }
 
-.top_label, .profile_name {
-    text-shadow: 5px 8px 10px var(--c-color);
-    color: var(--h-color);
-    font-size: 2rem;
+.top_label,
+.profile_name {
+  text-shadow: 5px 8px 10px var(--c-color);
+  color: var(--h-color);
+  font-size: 2rem;
 }
 
 .artists_list {
@@ -74,7 +76,8 @@ html {
   margin: 1rem;
 }
 
-.artist_img, .user_img {
+.artist_img,
+.user_img {
   max-height: 30vmin;
   max-width: 30vmin;
   border-radius: 200px;
@@ -94,19 +97,36 @@ a {
 }
 
 .spotify_icon {
-    height: 10vmin;
-    width: 10vmin;
-
+  height: 10vmin;
+  width: 10vmin;
 }
 
-.artist_img:hover, .user_item_img:hover {
-    box-shadow: 2px 1px 20px 15px var(--b-color);
-    border-radius: 200px;
-    background-color: var(--h-color);
+.artist_img:hover,
+.user_item_img:hover,
+.pass_btn:hover {
+  box-shadow: 2px 1px 20px 15px var(--b-color);
+  border-radius: 200px;
+  background-color: var(--h-color);
 }
 
-.spotify_icon:hover {
-    box-shadow: 2px 1px 20px 15px var(--i-color);
-    border-radius: 200px;
-    background-color: var(--h-color);
+.spotify_icon:hover,
+.msg_btn:hover {
+  box-shadow: 2px 1px 20px 15px var(--i-color);
+  border-radius: 200px;
+  background-color: var(--h-color);
+}
+
+.match_nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-self: space-around;
+  justify-items: space-around;
+}
+
+.pass_btn,
+.msg_btn {
+  height: 10vmin;
+  padding: 5px;
 }
