@@ -28,6 +28,7 @@ export const fetchUserById = async (id) => {
 export const fetchUserArtists = async (id) => {
   const res = await fetch(`${URL}user/artists/${id}`);
   const artistsArray = await res.json();
+  
   console.log(artistsArray, '======ARTISTS ARRAY++++++');
 
   return artistsArray;
