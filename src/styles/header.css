@@ -14,26 +14,37 @@ header {
     align-items: center;
     width: 100%;
     margin: 0;
-    background-image: url("https://thumbs.dreamstime.com/b/wave-sound-neon-vector-background-music-flow-soundwave-design-light-bright-blue-elements-isolated-dark-backdrop-radio-beat-143683394.jpg");
-    background-size: contain;
+    background-image: url("https://cdn141.picsart.com/334812395036211.png?type=webp&to=min&r=640");
+    background-size: cover;
     background-color: black;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .aicon, .bicon, .cicon, .cvicon {
     height: 7vmin;
     width:7vmin;
-    padding: 10px;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.618);
+    box-shadow: 1px 1px 10px 15px rgba(0, 0, 0, 0.618);
 }
 
 .vibn_logo {
     height: 11vmin;
+    border-radius: 100px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.618);
+    box-shadow: 1px 1px 25px 20px rgba(0, 0, 0, 0.618);
+}
+
+.vibn_logo:hover {
+        background-color: rgba(0, 244, 252, 0.42);
+    box-shadow: 1px 1px 25px 20px rgba(0, 244, 252, 0.42);
 }
 
 .aicon:hover, .bicon:hover, .cicon:hover, .cvicon:hover {
     border-radius: 20px;
     border: none;
     background-color: rgb(0, 119, 223);
-    box-shadow: 2px 2px 10px 5px rgb(0, 119, 223);
+    box-shadow: 1px 1px 10px 15px rgb(0, 119, 223);
 }
