@@ -5,7 +5,6 @@ import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
 import Header from './Header';
 import { useParams } from 'react-router-dom';
-// import { fetchUserById } from '../../services/userAuth';
 import PropTypes from 'prop-types';
 
 export default function UserDetail() {
