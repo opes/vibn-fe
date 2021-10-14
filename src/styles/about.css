@@ -49,6 +49,7 @@ body {
     color: blueviolet;
     padding: 10px;
     margin: 5px;
+    font-size: 3.5vmin;
 } 
 
 .links_container {
@@ -63,7 +64,7 @@ body {
     height: 50px;
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin: 15px;
 }
 
 .bio_logos_gh:hover {
