@@ -33,9 +33,16 @@ export const fetchUserArtists = async (id) => {
 };
 
 export const postUserArtists = async (payload) => {
+  console.log('PAY LOAD FROM POST USER ARTISTS', payload);
   const res = await fetch('http://localhost:7890/api/v1/user/artists/', {
     method: 'POST',
-    body: JSON.stringify(payload)
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    mode: 'cors',
+    body: JSON.stringify({
+      artistsArray: payload }),
   });
 
   const body = await res.json();
