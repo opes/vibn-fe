@@ -92,3 +92,22 @@ body {
   width: 100%;
 }
 
+@font-face {
+    font-family: 'Larabiefont';
+    src: url('../fonts/LarabiefontRg-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/LarabiefontRg-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/LarabiefontRg-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/LarabiefontRg-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/LarabiefontRg-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/LarabiefontRg-Regular.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Streamster';
+    src: url('../fonts/Streamster.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Streamster.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Streamster.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Streamster.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Streamster.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Streamster.svg') format('svg'); /* Legacy iOS */
+}
