@@ -18,7 +18,7 @@ export const fetchAllUsers = async () => {
   return userList;
 };
 
-export const fetchCurrentUserById = async (id) => {
+export const fetchUserById = async (id) => {
   const res = await fetch(`${URL}users/${id}`);
   const user = await res.json();
 

@@ -40,3 +40,7 @@ html, body {
     padding-bottom: 2rem;
     font-size: 1.2rem;
 }
+
+a:hover {
+    text-shadow: none;
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getSingleConvo } from '../../services/convos.js';
-import { fetchCurrentUserById } from '../../services/userAuth.js';
+import { fetchUserById } from '../../services/userAuth.js';
 import PropTypes from 'prop-types';
 
 export default function ConvoDetail({ match }) {
@@ -19,9 +19,9 @@ export default function ConvoDetail({ match }) {
   useEffect(() => {
     getSingleConvo(convoId)
       .then((oneConvo) => setConversation(oneConvo))
-      .then(fetchCurrentUserById(currentUserId))
+      .then(fetchUserById(currentUserId))
       .then((currentUser) => setFromUser(currentUser))
-      .then(fetchCurrentUserById(conversation.toUser))
+      .then(fetchUserById(conversation.toUser))
       .then((user) => setToUser(user))
       .finally(() => setLoading(false));
   }, []);
