@@ -1,3 +1,16 @@
+body {
+  --a-color: #f72585ff;
+  --b-color: #b5179eff;
+  --c-color: #7209b7ff;
+  --d-color: #560badff;
+  --e-color: #480ca8ff;
+  --f-color: #3a0ca3ff;
+  --g-color: #3f37c9ff;
+  --h-color: #0361eeff;
+  --i-color: #2895efff;
+  --j-color: #4cc9f0ff;
+}
+
 .about_container {
     display: flex;
     flex-direction:column;
@@ -41,14 +54,28 @@
 .links_container {
     display: flex;
     flex-direction: row;
+    width: 100%;
     margin: 5px;
+    justify-content: space-around;
 }
 
-.bio_logos {
+.bio_logos_gh, .bio_logos_li {
     height: 50px;
     display: flex;
     flex-direction: row;
     margin: 5px;
+}
+
+.bio_logos_gh:hover {
+  box-shadow: 2px 1px 15px 10px var(--e-color);
+  background-color: var(--e-color);
+  border-radius: 300px;
+}
+
+.bio_logos_li:hover {
+  box-shadow: 2px 1px 10px 15px var(--h-color);
+  background-color: var(--h-color);
+  border-radius: 300px;
 }
 
 .linebreak {
