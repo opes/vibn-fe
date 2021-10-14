@@ -12,10 +12,6 @@ export default function UserList() {
   const { allUsers, loading } = useListOfUsers();
   // const { userArtists } = useUserArtists(localStorage.getItem('CURRENT_USER_ID'));
   // console.log(userArtists ? userArtists : 'the rain in spain stays mainly on the plane');
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   history.push(`/user/${allUsers.id}/dash`);
-  // };
 
   if (loading) return <h1>Loading...</h1>;
 

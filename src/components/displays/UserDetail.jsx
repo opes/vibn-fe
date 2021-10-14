@@ -54,3 +54,15 @@ export default function UserDetail() {
     </div>
   );
 }
+
+UserProfile.propTypes = {
+  artists: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      image: PropTypes.string,
+      spotify: PropTypes.string,
+      id: PropTypes.string,
+      genres: PropTypes.string,
+    })
+  ),
+};

@@ -4,7 +4,6 @@ export const fetchConvosByUserId = async (id) => {
   //   `https://vibn.herokuapp.com/api/v1/user/convos/${id}/convo`
   // );
   const userAndConvos = await res.json();
-
   return userAndConvos;
 };
 
@@ -23,7 +22,7 @@ export const getSingleConvo = async (id) => {
   // const res = await fetch(
   //   `https://vibn.herokuapp.com/api/v1/convos/${id}/convo`
   // );
-  const singleConvo = await res.json();
 
+  const singleConvo = await res.json();
   return singleConvo;
 };
