@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { fetchMessagesToCurrentUser } from '../../services/convos';
 import ConvoItem from './ConvoItem';
+import Header from './Header';
 
 export default function Conversations() {
   const [conversations, setConversations] = useState([]);
 
   const currentUserId = localStorage.getItem('CURRENT_USER_ID');
+
+  console.log(conversations);
 
   useEffect(() => {
     fetchMessagesToCurrentUser(currentUserId)
@@ -14,6 +17,7 @@ export default function Conversations() {
 
   return (
     <div>
+      <Header />
       <h1>Your Messages</h1>
       <main>
         {conversations.map(item => 

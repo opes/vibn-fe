@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchUserById } from '../../services/userAuth';
-import PropTypes from 'prop-types';
 
 export default function ConvoItem({ convo }) {
   const [fromUser, setFromUser] = useState({});
   const [loading, setLoading] = useState(true);
+console.log(convo)
+  const currentUserId = localStorage.getItem('CURRENT_USER_ID');
 
   useEffect(() => {
     fetchUserById(convo.from_user)
@@ -18,7 +19,7 @@ export default function ConvoItem({ convo }) {
   }
 
   return (
-    <Link to={`/user/convo/detail/${convo.id}`}>
+    <Link to={`/convo/${currentUserId}/detail/${convo.id}`}>
       <div>
         <h4>
             from: {fromUser.displayName}
@@ -35,14 +36,3 @@ export default function ConvoItem({ convo }) {
     </Link>
   );
 }
-
-ConvoItem.propTypes = {
-  item: PropTypes.shape({
-    id: PropTypes.string,
-    toUser: PropTypes.string,
-    fromUser: PropTypes.string,
-    message: PropTypes.string,
-    date: PropTypes.string,
-  }),
-  id: PropTypes.string,
-};

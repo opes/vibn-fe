@@ -54,6 +54,7 @@ export default function CreateConvo() {
 
   return (
     <div>
+      <Header />
       <h1>Send a message</h1>
       <form onSubmit={handleSubmit}>
         <h2>Your message to {toUser.displayName}</h2>

@@ -35,7 +35,7 @@ export default function App() {
           <Route exact path="/convo/create/:id/">
             <CreateConvo />
           </Route>
-          <Route exact path="/user/convo/detail/:id">
+          <Route exact path="/convo/:id/detail/:convoId">
             <ConvoDetail />
           </Route>
         </Switch>

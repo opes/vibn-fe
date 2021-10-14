@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { getSingleConvo } from '../../services/convos.js';
 import { fetchUserById } from '../../services/userAuth.js';
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
+import Header from './Header.jsx';
 
-export default function ConvoDetail({ match }) {
-  const [toUser, setToUser] = useState({});
+export default function ConvoDetail() {
+  const [conversation, setConversation] = useState({});
   const [fromUser, setFromUser] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [conversation, setConversation] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const convoId = match.params.id;
-  const currentUserId = localStorage.getItem('CURRENT_USER_ID');
+  const { convoId } = useParams();
   
   useEffect(() => {
-    setLoading(true);
     getSingleConvo(convoId)
     .then((oneConvo) => setConversation(oneConvo))
-    .then(fetchUserById(currentUserId))
-    .then((currentUser) => setFromUser(currentUser))
-    .then(fetchUserById(conversation.toUser))
-    .then((user) => setToUser(user))
-    .finally(() => setLoading(false));
-  }, []);
+    .then(fetchUserById(conversation.fromUser))
+    .then((user) => setFromUser(user))
+  }, [convoId]);
+
+  // useEffect(() => {
+  //   fetchUserById(conversation.fromUser)
+  //   .then((user) => setFromUser(user))
+  //   .finally(() => setLoading(false));
+  // }, [conversation])
+
+  console.log(conversation);
   
   if (loading) {
     return <h1>Loading...</h1>;
@@ -29,10 +32,10 @@ export default function ConvoDetail({ match }) {
 
   return (
     <>
+      <Header />
       <div>
         <h4>
               from: {fromUser.displayName}
-              to: {toUser.displayName}
         </h4>
       </div>
       <article>
@@ -46,13 +49,3 @@ export default function ConvoDetail({ match }) {
     </>           
   );
 }
-  
-ConvoDetail.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      access_token: PropTypes.string,
-      refresh_token: PropTypes.string,
-      id: PropTypes.string,
-    }),
-  }),
-};

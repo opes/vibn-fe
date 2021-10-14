@@ -33,7 +33,7 @@ export const postToConvos = async (payload) => {
 };
 
 export const getSingleConvo = async (id) => {
-  const res = await fetch(`http://localhost:/7890/api/v1/convos/${id}`);
+  const res = await fetch(`http://localhost:7890/api/v1/convos/${id}`);
   // const res = await fetch(
   //   `https://vibn.herokuapp.com/api/v1/convos/${id}/convo`
   // );
