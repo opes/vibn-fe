@@ -6,6 +6,7 @@ import linebreak from '../../assets/linebreak.png';
 import Header from './Header';
 import { useParams } from 'react-router-dom';
 // import { fetchUserById } from '../../services/userAuth';
+import PropTypes from 'prop-types';
 
 export default function UserDetail() {
   const { id } = useParams();
@@ -55,14 +56,13 @@ export default function UserDetail() {
   );
 }
 
-UserProfile.propTypes = {
+UserDetail.propTypes = {
   artists: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
       image: PropTypes.string,
       spotify: PropTypes.string,
       id: PropTypes.string,
-      genres: PropTypes.string,
     })
   ),
 };
