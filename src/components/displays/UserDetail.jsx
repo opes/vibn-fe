@@ -12,6 +12,7 @@ import useArtists from '../../hooks/useArtists';
 
 export default function UserDetail() {
   const { id } = useParams();
+  console.log(id);
   const { userObject, loading } = useOtherUser(id);
   const { artistsArray } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
@@ -35,7 +36,7 @@ export default function UserDetail() {
         <Link to="/users">
           <img src={pass} className={styles.pass_btn} />
         </Link>
-        <Link to={`/user/${id}/create/convo`}>
+        <Link to={`/convo/create/${id}/`}>
           <img src={msg} className={styles.msg_btn} />
         </Link>
       </section>

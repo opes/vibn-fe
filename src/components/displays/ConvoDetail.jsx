@@ -6,25 +6,26 @@ import PropTypes from 'prop-types';
 export default function ConvoDetail({ match }) {
   const [toUser, setToUser] = useState({});
   const [fromUser, setFromUser] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [conversation, setConversation] = useState([]);
 
   const convoId = match.params.id;
   const currentUserId = localStorage.getItem('CURRENT_USER_ID');
-
+  
+  useEffect(() => {
+    setLoading(true);
+    getSingleConvo(convoId)
+    .then((oneConvo) => setConversation(oneConvo))
+    .then(fetchUserById(currentUserId))
+    .then((currentUser) => setFromUser(currentUser))
+    .then(fetchUserById(conversation.toUser))
+    .then((user) => setToUser(user))
+    .finally(() => setLoading(false));
+  }, []);
+  
   if (loading) {
     return <h1>Loading...</h1>;
   }
-
-  useEffect(() => {
-    getSingleConvo(convoId)
-      .then((oneConvo) => setConversation(oneConvo))
-      .then(fetchUserById(currentUserId))
-      .then((currentUser) => setFromUser(currentUser))
-      .then(fetchUserById(conversation.toUser))
-      .then((user) => setToUser(user))
-      .finally(() => setLoading(false));
-  }, []);
 
   return (
     <>
