@@ -20,6 +20,10 @@ header {
     padding: 10px;
 }
 
+.vibn_logo {
+    height: 11vmin;
+}
+
 .aicon:hover, .bicon:hover, .cicon:hover, .cvicon:hover {
     border-radius: 20px;
     background-color: rgb(0, 119, 223);
