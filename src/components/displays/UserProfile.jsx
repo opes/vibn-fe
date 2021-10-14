@@ -12,8 +12,6 @@ export default function UserProfile() {
   const { userObject, loading } = useLoggedInUser();
   const { artistsArray } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
-  userObject && console.log(artistsArray);
-
   useEffect(() => {
     postUserArtists(artistsArray);
   }, [artistsArray]);
@@ -64,18 +62,15 @@ export default function UserProfile() {
           {userObject
             ? artistsArray.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
-                <p>
+                <a href={artist.external_urls.spotify} alt={artist.name}>
                   <img className={styles.artist_img} src={artist.images[1].url} />
-                </p>
+                </a>
                 <p className={styles.artist_name}>
-                  <a href={artist.external_urls.spotify} alt={artist.name}>
-                    {artist.name}
-                  </a>
+                  {artist.name}
                 </p>
-                {/* <p className={styles.genres}>{artist.genres}</p> */}
               </li>
             ))
-            : 'unavailable'}
+            : 'No Top Artists Found'}
         </ul>
       </section>
     </div>
@@ -89,7 +84,6 @@ UserProfile.propTypes = {
       image: PropTypes.string,
       spotify: PropTypes.string,
       id: PropTypes.string,
-      genres: PropTypes.string,
     })
   ),
 };

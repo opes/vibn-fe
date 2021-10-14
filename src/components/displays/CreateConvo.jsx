@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { postToConvos } from '../../services/convos';
-import { fetchCurrentUserById } from '../../services/userAuth';
+import { fetchUserById } from '../../services/userAuth';
 import PropTypes from 'prop-types';
 
 export default function CreateConvo({ match }) {
   const [today, setToday] = useState('');
   const currentUserId = localStorage.getItem('CURRENT_USER_ID');
-  const toUser = fetchCurrentUserById(match.params.id);
+  const toUser = fetchUserById(match.params.id);
   const [message, setMessage] = useState();
 
   const createDate = () => {
@@ -29,6 +29,8 @@ export default function CreateConvo({ match }) {
     });
 
     window.location.href = `http://localhost:7891/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`;
+    // window.location.href = `https://vib.netlify.app/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`;
+
   };
 
   const handleTextChange = async (event) => {
@@ -53,10 +55,10 @@ export default function CreateConvo({ match }) {
 CreateConvo.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      access_token: PropTypes.string.isRequired,
-      refresh_token: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
+      access_token: PropTypes.string,
+      refresh_token: PropTypes.string,
+      id: PropTypes.string,
+    }),
+  }),
 };
 

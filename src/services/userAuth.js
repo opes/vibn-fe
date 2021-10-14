@@ -14,11 +14,11 @@ export const fetchCurrentUser = async () => {
 export const fetchAllUsers = async () => {
   const res = await fetch(`${URL}users`);
   const userList = await res.json();
-
+  console.log('---userlist---', userList);
   return userList;
 };
 
-export const fetchCurrentUserById = async (id) => {
+export const fetchUserById = async (id) => {
   const res = await fetch(`${URL}users/${id}`);
   const user = await res.json();
 

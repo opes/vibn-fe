@@ -7,7 +7,7 @@ export default function useArtists(token) {
 
   useEffect(() => {
     fetchTopArtists(token)
-      .then((artistArray) => setArtists(artistArray))
+      .then((artistArray) => setArtists(artistArray.items))
       .finally(() => setloading(false));
   }, []);
 

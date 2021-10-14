@@ -4,7 +4,6 @@ import ConvoItem from './ConvoItem';
 
 export default function Conversations() {
   const [conversations, setConversations] = useState([]);
-
   const filterById = (item) => {
     if (item.toUser === localStorage.getItem('CURRENT_USER_ID')) {
       return true;
