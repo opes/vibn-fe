@@ -5,8 +5,8 @@ import vibn from '../../assets/vibn.png';
 export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    window.push.href = 'https://vibn.herokuapp.com/api/v1/auth/login';
-    // window.location.href = 'http://localhost:7890/api/v1/auth/login';
+    // window.push.href = 'https://vibn.herokuapp.com/api/v1/auth/login';
+    window.location.href = 'http://localhost:7890/api/v1/auth/login';
   };
 
   return (
