@@ -32,7 +32,7 @@ export default function App() {
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/user/create/convo/:id">
+          <Route exact path="/user/:id/create/convo">
             <CreateConvo />
           </Route>
           <Route exact path="/user/convo/detail/:id">

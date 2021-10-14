@@ -3,8 +3,10 @@ import useOtherUser from '../../hooks/useOtherUser';
 // import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
+import pass from '../../assets/pass-icon.png';
+import msg from '../../assets/msg-user-icon.png';
 import Header from './Header';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import useArtists from '../../hooks/useArtists';
 
@@ -27,6 +29,15 @@ export default function UserDetail() {
           />
         </a>
         <h2 className={styles.user_name}>{userObject.displayName}</h2>
+      </section>
+
+      <section className={styles.match_nav}>
+        <Link to="/users">
+          <img src={pass} className={styles.pass_btn} />
+        </Link>
+        <Link to={`/user/${id}/create/convo`}>
+          <img src={msg} className={styles.msg_btn} />
+        </Link>
       </section>
 
       <img src={linebreak} alt="linebreak" />
