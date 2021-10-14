@@ -12,9 +12,9 @@ body {
 }
 
 html, body {
-    background-color: black;
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 
 .signin_body {
@@ -22,51 +22,49 @@ html, body {
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     text-align: center;
     background-color: black;
 }
 
 .signin_btn {
-    align-items: center;
+    font-family: 'Larabiefont';
+    font-size: 4.5vmin;
+    font-weight: 900;
     justify-content: center;
     align-self: center;
     text-align: center;
-    background-color: var(--i-color);
     padding: 1rem;
     margin: 10vmin;
-    border-radius: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    border: 5px solid var(--j-color);
     border-radius: 300px;
+    border: 5px solid var(--j-color);
     box-shadow: 2px 1px 20px 15px var(--j-color);
-    color: var(--b-color);
-    font-family: 'Permanent Marker';
-    font-size: 4.5vmin;
+    color: var(--a-color);
+    background-color: var(--h-color);
 }
 
 .signin_btn:hover {
   cursor: pointer;
+  border-radius: 300px;
   background-color: var(--b-color);
   box-shadow: 2px 1px 20px 15px var(--a-color);
-  border-radius: 300px;
   border: 5px solid var(--a-color);
-  color: var(--j-color);
+  color: var(--d-color);
 }
 
 .vibn_logo {
     width: 42vmin;
     height: 34vmin;
     padding: 3rem;
+    align-self: center;
 }
 
 .vibn_desc {
-    color: rgb(128, 0, 255);
-    font-style: italic;
     padding-bottom: 2rem;
-    font-size: 1.2rem;
-    font-family: 'Permanent Marker';
+    font-size: 2.2rem;
+    font-family: 'Streamster';
+    text-align: center;
+    color: rgb(128, 0, 255);
 }
 
 a:hover {
