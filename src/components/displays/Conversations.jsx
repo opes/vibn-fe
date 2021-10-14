@@ -12,8 +12,8 @@ export default function Conversations() {
 
   useEffect(() => {
     fetchMessagesToCurrentUser(currentUserId)
-    .then((convos) => setConversations(convos))
-  }, [])
+      .then((convos) => setConversations(convos));
+  }, []);
 
   return (
     <div>

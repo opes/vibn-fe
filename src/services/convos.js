@@ -8,15 +8,15 @@ export const fetchUserConvosByUserId = async (id) => {
 };
 
 export const fetchMessagesToCurrentUser = async (id) => {
-  const res = await fetch(`http://localhost:7890/api/v1/users/convos/to/${id}`)
+  const res = await fetch(`http://localhost:7890/api/v1/users/convos/to/${id}`);
 
   const messagesToCurrentUser = await res.json();
 
   return messagesToCurrentUser;
-}
+};
 
 export const postToConvos = async (payload) => {
-  const res = await fetch('http://localhost:7890/api/v1/user/convos/', {
+  const res = await fetch('http://localhost:7890/api/v1/convos/', {
   // const res = await fetch('https://vibn.herokuapp.com/api/v1/user/convos/', {
     method: 'POST',
     headers: {

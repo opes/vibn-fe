@@ -8,25 +8,21 @@ const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tu
 
 export default function ConvoDetail() {
   const [conversation, setConversation] = useState({});
-  const [fromUser, setFromUser] = useState({});
+  const [fromUserObject, setFromUser] = useState({});
   const [loading, setLoading] = useState(true);
 
   const { convoId } = useParams();
   
   useEffect(() => {
     getSingleConvo(convoId)
-    .then((oneConvo) => setConversation(oneConvo))
-    .then(fetchUserById(conversation.fromUser))
-    .then((user) => setFromUser(user))
-  }, [convoId]);
+      .then((oneConvo) => setConversation(oneConvo));
+  }, []);
 
-  // useEffect(() => {
-  //   fetchUserById(conversation.fromUser)
-  //   .then((user) => setFromUser(user))
-  //   .finally(() => setLoading(false));
-  // }, [conversation])
-
-  console.log(conversation);
+  useEffect(() => {
+    fetchUserById(conversation.fromUser)
+      .then((user) => setFromUser(user))
+      .finally(() => setLoading(false));
+  }, [conversation]);
   
   if (loading) {
     return <img src={spinner} alt="spinner" />;
@@ -37,7 +33,7 @@ export default function ConvoDetail() {
       <Header />
       <div>
         <h4>
-              from: {fromUser.displayName}
+              from: {fromUserObject.displayName}
         </h4>
       </div>
       <article>

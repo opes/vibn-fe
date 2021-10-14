@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { postToConvos } from '../../services/convos';
 import { fetchUserById } from '../../services/userAuth';
 import { useParams, useHistory } from 'react-router-dom';
+import Header from './Header';
 
 export default function CreateConvo() {
   const [today, setToday] = useState('');
   const [toUser, setToUser] = useState({});
   const [fromUser, setFromUser] = useState({});
   const [message, setMessage] = useState('');
-  
+
   const createDate = () => {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const today = new Date();
@@ -23,14 +24,14 @@ export default function CreateConvo() {
 
   useEffect(() => {
     fetchUserById(currentUserId)
-    .then((user) => setFromUser(user))
-  }, [])
+      .then((user) => setFromUser(user));
+  }, []);
 
   useEffect(() => {
     fetchUserById(id)
-    .then((user) => setToUser(user))
-    .finally(() => setToday(createDate()));
-  }, [])
+      .then((user) => setToUser(user))
+      .finally(() => setToday(createDate()));
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
