@@ -10,7 +10,6 @@ body {
 --i-color: #2895efff;
 --j-color: #4cc9f0ff;
 }
-/* var(--a-pink) */
 
 html {
   background-color: black;
@@ -32,18 +31,28 @@ html {
   background-color: black;
   font-family: 'Permanent Marker';
   font-size: 3vmin;
+  color: var(--i-color);
 }
 
-.profile_pic {
+.profile_pic, .user_img {
   border: 5px var(--a-color)  solid;
   margin-top: 8vmin;
   border-radius: 200px;
   align-self: center;
-/* 
   box-shadow: var(--a-color)  0 -1px 4px, var(--b-color)  0 -2px 50px,
     var(--c-color)  0 -10px 50px, var(--d-color)  0 -18px 40px,
-    7px 7px 9px 15px rgba(0, 0, 0, 0);*/
-} 
+    7px 7px 9px 15px rgba(0, 0, 0, 0);
+}
+
+.user_img:hover {
+  border: 5px var(--j-color)  solid;
+  margin-top: 8vmin;
+  border-radius: 200px;
+  align-self: center;
+  box-shadow: var(--i-color)  0 -1px 4px, var(--j-color)  0 -2px 50px,
+    var(--h-color)  0 -10px 50px, var(--g-color)  0 -18px 40px,
+    7px 7px 9px 15px rgba(0, 0, 0, 0);
+}
 
 .top_label, .profile_name {
     text-shadow: 5px 8px 10px var(--c-color);
@@ -65,7 +74,7 @@ html {
   margin: 1rem;
 }
 
-.artist_img {
+.artist_img, .user_img {
   max-height: 30vmin;
   max-width: 30vmin;
   border-radius: 200px;
@@ -79,11 +88,6 @@ html {
   text-shadow: 5px 8px 10px var(--h-color);
 }
 
-a:hover, .artist_name:hover {
-    text-shadow: 5px 8px 10px var(--a-color);
-    color: var(--h-color);
-}
-
 a {
   color: var(--e-color);
   text-decoration: wavy;
@@ -92,12 +96,17 @@ a {
 .spotify_icon {
     height: 10vmin;
     width: 10vmin;
-    box-shadow: 2px 1px 25px var(--i-color);
+
+}
+
+.artist_img:hover, .user_item_img:hover {
+    box-shadow: 2px 1px 20px 15px var(--b-color);
     border-radius: 200px;
     background-color: var(--h-color);
 }
 
 .spotify_icon:hover {
-    box-shadow: 2px 1px 25px var(--a-color);
-    background-color: var(--b-color);
+    box-shadow: 2px 1px 20px 15px var(--i-color);
+    border-radius: 200px;
+    background-color: var(--h-color);
 }

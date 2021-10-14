@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
@@ -12,27 +11,9 @@ export default function UserProfile() {
   const { userObject, loading } = useLoggedInUser();
   const { artistsArray } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
-  userObject && console.log(artistsArray);
-
   useEffect(() => {
     postUserArtists(artistsArray);
-  }, [artistsArray])
-
-  // const userArtistJoin = async (id) => {
-  //   const res = await fetch(`http://localhost:7890/api/v1/user/artists/${id}/topart`);
-  //   const userArtists = await res.json();
-
-  //   return userArtists;
-  // };
-
-  // if (userObject) {
-  //   if(!(userArtistJoin(userObject.id))) {
-      
-  //     postUserArtists(artists);
-  //   } else {
-  //     console.log('waiting for user...');
-  //   }
-  // }
+  }, [artistsArray]);
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -61,35 +42,20 @@ export default function UserProfile() {
 
       <section className={styles.artists_container}>
         <ul className={styles.artists_list}>
-          {userObject
+          {artistsArray
             ? artistsArray.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
-                <p>
+                <a href={artist.external_urls.spotify} alt={artist.name}>
                   <img className={styles.artist_img} src={artist.images[1].url} />
-                </p>
+                </a>
                 <p className={styles.artist_name}>
-                  <a href={artist.external_urls.spotify} alt={artist.name}>
-                    {artist.name}
-                  </a>
+                  {artist.name}
                 </p>
-                {/* <p className={styles.genres}>{artist.genres}</p> */}
               </li>
             ))
-            : 'unavailable'}
+            : 'No Top Artists Found'}
         </ul>
       </section>
     </div>
   );
 }
-
-UserProfile.propTypes = {
-  artists: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      image: PropTypes.string,
-      spotify: PropTypes.string,
-      id: PropTypes.string,
-      genres: PropTypes.string,
-    })
-  ),
-};

@@ -14,11 +14,11 @@ export const fetchCurrentUser = async () => {
 export const fetchAllUsers = async () => {
   const res = await fetch(`${URL}users`);
   const userList = await res.json();
-
+  
   return userList;
 };
 
-export const fetchCurrentUserById = async (id) => {
+export const fetchUserById = async (id) => {
   const res = await fetch(`${URL}users/${id}`);
   const user = await res.json();
 
@@ -33,13 +33,17 @@ export const fetchUserArtists = async (id) => {
 };
 
 export const postUserArtists = async (payload) => {
+  console.log('PAY LOAD FROM POST USER ARTISTS', payload);
   const res = await fetch('http://localhost:7890/api/v1/user/artists/', {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
     credentials: 'include',
     mode: 'cors',
     body: JSON.stringify({
-      artistsArray: payload}),
-  })
+      artistsArray: payload }),
+  });
 
   const body = await res.json();
   return body;

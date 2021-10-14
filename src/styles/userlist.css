@@ -1,0 +1,70 @@
+body { 
+--a-color: #f72585ff;
+--b-color: #b5179eff;
+--c-color: #7209b7ff;
+--d-color: #560badff;
+--e-color: #480ca8ff;
+--f-color: #3a0ca3ff;
+--g-color: #3f37c9ff;
+--h-color: #0361eeff;
+--i-color: #2895efff;
+--j-color: #4cc9f0ff;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.doods {
+    color: var(--a-color);
+    font-family: 'Permanent Marker';
+    font-size: 3rem;
+    text-align: center;
+}
+
+.users_container {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    background-color: black;
+}
+
+.userlist {
+    display: flex;
+    flex-direction: row;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 3rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.user_item_img {
+  max-height: 30vmin;
+  max-width: 30vmin;
+  border-radius: 200px;
+  border: 5px var(--b-color) solid;
+  margin: 5px;
+}
+
+.user_name {
+padding-bottom: 10px;
+  font-family: 'Permanent Marker';
+  font-size: 2rem;
+  text-shadow: 5px 8px 10px var(--h-color);
+}
+
+.user_item_img:hover {
+    box-shadow: 2px 2px 20px 25px var(--a-color);
+    border-radius: 200px;
+    background-color: var(--b-color);
+}
+

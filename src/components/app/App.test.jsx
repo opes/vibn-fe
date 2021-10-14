@@ -6,7 +6,7 @@ describe('App', () => {
   it('renders app', () => {
     render(<App />);
 
-    const app = screen.getByText('vibn');
-    expect(app).toMatchSnapshot();
+    const app = screen.getByText('Find your music match');
+    expect(app).not.toBeEmptyDOMElement();
   });
 });

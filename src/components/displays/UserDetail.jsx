@@ -1,41 +1,66 @@
 import React from 'react';
-import useUsers from '../../hooks/useUsers';
-import PropTypes from 'prop-types';
+import useOtherUser from '../../hooks/useOtherUser';
 // import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
-// import icon from '../../assets/spotify-icon.png';
 import Header from './Header';
+import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import useArtists from '../../hooks/useArtists';
 
-export default function UserProfile() {
-  const { userObject, loading } = useUsers();
-  // const { artists } = userObject && useArtists(userObject.id);
-  
-  userObject && localStorage.setItem('VIEWED_USER', userObject.id);
+export default function UserDetail() {
+  const { id } = useParams();
+  const { userObject, loading } = useOtherUser(id);
+  const { artistsArray } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
+  if (loading) return <h3>Loading</h3>;
 
   return (
     <div className={styles.profile_main}>
       <Header />
       <section className={styles.profile}>
+        <a href={userObject.profileURL} className={styles.profile_link}>
+          <img
+            className={styles.user_img}
+            alt="user image"
+            src={userObject.image}
+          />
+        </a>
+        <h2 className={styles.user_name}>{userObject.displayName}</h2>
       </section>
+
       <img src={linebreak} alt="linebreak" />
-      <h3 className={styles.top_label}>Your Top Artists</h3>
+      <h3 className={styles.top_label}>
+        {userObject.displayName}&apos;s Top Artists
+      </h3>
+
+      <section className={styles.artists_container}>
+        <ul className={styles.artists_list}>
+          {artistsArray
+            ? artistsArray.map((artist) => (
+              <li className={styles.artists_item} key={artist.id}>
+                <a href={artist.external_urls.spotify} alt={artist.name}>
+                  <img className={styles.artist_img} src={artist.images[1].url} />
+                </a>
+                <p className={styles.artist_name}>
+                  {artist.name}
+                </p>
+              </li>
+            ))
+            : 'No Top Artists Found'}
+        </ul>
+      </section>
     </div>
   );
 }
 
-UserProfile.propTypes = {
+UserDetail.propTypes = {
   artists: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
       image: PropTypes.string,
       spotify: PropTypes.string,
       id: PropTypes.string,
-      genres: PropTypes.string,
     })
   ),
 };

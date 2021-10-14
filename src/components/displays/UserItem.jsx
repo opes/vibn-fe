@@ -1,45 +1,19 @@
 import React from 'react';
 import styles from '../../styles/userlist.css';
 import PropTypes from 'prop-types';
-import useUsers from '../../hooks/useUsers';
-import useUserArtists from '../../hooks/useUserArtists';
 
-export default function UserItem() {
-  const { user, loading } = useUsers();
-  const { userArtists } = useUserArtists();
-
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
-
+export default function UserItem({ displayName, image }) {
   return (
     <div>
       <section className={styles.user_info}>
-        <img
-          className={styles.user_img}
-          src={user.image}
-          alt={user.displayName}
-        />
-        <h2 className={styles.user_name}>{user.displayName}</h2>
-      </section>
-      <section className={styles.top_artists}>
-        <p className={styles.artist_name}>{userArtists.artist_a}</p>
-        <p className={styles.artist_name}>{userArtists.artist_b}</p>
+        <img className={styles.user_item_img} src={image} alt={displayName} />
+        <h2 className={styles.user_name}>{displayName}</h2>
       </section>
     </div>
   );
-
 }
 
 UserItem.propTypes = {
-  users: PropTypes.arrayOf(
-    PropTypes.shape({
-      displayName: PropTypes.string,
-      image: PropTypes.string,
-      spotify: PropTypes.string,
-      id: PropTypes.string,
-      artist_a: PropTypes.string,
-      artist_b: PropTypes.string
-    })
-  ),
+  displayName: PropTypes.string,
+  image: PropTypes.string,
 };
