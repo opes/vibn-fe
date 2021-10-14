@@ -4,7 +4,7 @@ const URL = 'http://localhost:7890/api/v1/';
 export const fetchCurrentUser = async () => {
   const res = await fetch(`${URL}auth/verify`, {
     credentials: 'include',
-    mode: 'cors'
+    mode: 'cors',
   });
   const user = await res.json();
 
@@ -14,7 +14,7 @@ export const fetchCurrentUser = async () => {
 export const fetchAllUsers = async () => {
   const res = await fetch(`${URL}users`);
   const userList = await res.json();
-  
+
   return userList;
 };
 
@@ -26,24 +26,27 @@ export const fetchUserById = async (id) => {
 };
 
 export const fetchUserArtists = async (id) => {
-  const res = await fetch(`${URL}user/artists/${id}/topart`);
+  const res = await fetch(`${URL}user/artists/${id}`);
   const artistsArray = await res.json();
+  console.log(artistsArray, '======ARTISTS ARRAY++++++');
 
   return artistsArray;
 };
 
 export const postUserArtists = async (payload) => {
-  console.log('PAY LOAD FROM POST USER ARTISTS', payload);
   const res = await fetch('http://localhost:7890/api/v1/user/artists/', {
+    // const res = await fetch('https://vibn.herokuapp.com/api/v1/user/artists/', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     credentials: 'include',
     mode: 'cors',
     body: JSON.stringify({
-      artistsArray: payload }),
+      artistsArray: payload,
+    }),
   });
+
 
   const body = await res.json();
   return body;
