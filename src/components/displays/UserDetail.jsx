@@ -6,11 +6,12 @@ import linebreak from '../../assets/linebreak.png';
 import Header from './Header';
 import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import useArtists from '../../hooks/useArtists';
 
 export default function UserDetail() {
   const { id } = useParams();
   const { userObject, loading } = useOtherUser(id);
-  // const { artists } = userObject && useArtists(userObject.id);
+  const { artistsArray } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
   if (loading) return <h3>Loading</h3>;
 
@@ -33,24 +34,22 @@ export default function UserDetail() {
         {userObject.displayName}&apos;s Top Artists
       </h3>
 
-      {/* <section className={styles.artists_container}>
+      <section className={styles.artists_container}>
         <ul className={styles.artists_list}>
-          {artists
-            ? artists.map((artist) => (
+          {artistsArray
+            ? artistsArray.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
-                <p>
+                <a href={artist.external_urls.spotify} alt={artist.name}>
                   <img className={styles.artist_img} src={artist.images[1].url} />
-                </p>
+                </a>
                 <p className={styles.artist_name}>
-                  <a href={artist.external_urls.spotify} alt={artist.name}>
-                    {artist.name}
-                  </a>
+                  {artist.name}
                 </p>
               </li>
             ))
             : 'No Top Artists Found'}
         </ul>
-      </section> */}
+      </section>
     </div>
   );
 }

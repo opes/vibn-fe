@@ -22,7 +22,7 @@ export default class Header extends Component {
             </Link>
           </div>
           <div className={styles.icon}>
-            <Link to="/conversations">
+            <Link to="/user/:id/conversations">
               <img className={styles.cvicon} src={cv_icon} />
             </Link>
           </div>
