@@ -4,6 +4,7 @@
     margin: 20px;
     width: 100%;
     justify-content: space-between;
+
 }
 
 header {
@@ -12,6 +13,12 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin: 0;
+    background-image: url("https://thumbs.dreamstime.com/b/wave-sound-neon-vector-background-music-flow-soundwave-design-light-bright-blue-elements-isolated-dark-backdrop-radio-beat-143683394.jpg");
+    background-size: contain;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .aicon, .bicon, .cicon, .cvicon {
