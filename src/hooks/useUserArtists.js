@@ -9,7 +9,7 @@ export default function useUserArtists(id) {
     fetchUserArtists(id)
       .then((userArtistArray) => setUserArtists(userArtistArray))
       .finally(() => setloading(false));
-  }, []);
+  }, [id]);
 
   return { userArtists, loading };
 }

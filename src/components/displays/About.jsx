@@ -11,7 +11,7 @@ export default class About extends Component {
       <div className={styles.about_container}>
         <Header />
         <h1 className={styles.about_title}>We&apos;re Vibn</h1>
-        <img src={linebreak} alt="linebreak" />
+        <img src={linebreak} alt="linebreak" className={styles.linebreak} />
         <section className={styles.bri}>
           <h1 className={styles.bio_name}>Bri</h1>
           <p className={styles.bio}>
@@ -23,13 +23,13 @@ export default class About extends Component {
           </p>
           <section className={styles.links_container}>
             <a className={styles.bio_links} href="https://github.com/bribias">
-              <img src={ghlogo} className={styles.bio_logos} />
+              <img src={ghlogo} className={styles.bio_logos_gh} />
             </a>
             <a
               className={styles.bio_links}
               href="https://www.linkedin.com/in/bribias/"
             >
-              <img src={lilogo} className={styles.bio_logos} />
+              <img src={lilogo} className={styles.bio_logos_li} />
             </a>
           </section>
         </section>
@@ -48,13 +48,13 @@ export default class About extends Component {
           </p>
           <section className={styles.links_container}>
             <a className={styles.bio_links} href="https://github.com/eliamue">
-              <img src={ghlogo} className={styles.bio_logos} />
+              <img src={ghlogo} className={styles.bio_logos_gh} />
             </a>
             <a
               className={styles.bio_links}
               href="https://www.linkedin.com/in/eliamue/"
             >
-              <img src={lilogo} className={styles.bio_logos} />
+              <img src={lilogo} className={styles.bio_logos_li} />
             </a>
           </section>
         </section>
@@ -73,13 +73,13 @@ export default class About extends Component {
               className={styles.bio_links}
               href="https://github.com/sofiatejada"
             >
-              <img src={ghlogo} className={styles.bio_logos} />
+              <img src={ghlogo} className={styles.bio_logos_gh} />
             </a>
             <a
               className={styles.bio_links}
               href="https://www.linkedin.com/in/sofianais/"
             >
-              <img src={lilogo} className={styles.bio_logos} />
+              <img src={lilogo} className={styles.bio_logos_li} />
             </a>
           </section>
         </section>

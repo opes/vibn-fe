@@ -1,10 +1,23 @@
+body {
+    background-color: black;
+  --a-color: #f72585ff;
+  --b-color: #b5179eff;
+  --c-color: #7209b7ff;
+  --d-color: #560badff;
+  --e-color: #480ca8ff;
+  --f-color: #3a0ca3ff;
+  --g-color: #3f37c9ff;
+  --h-color: #0361eeff;
+  --i-color: #2895efff;
+  --j-color: #4cc9f0ff;
+}
+
 .about_container {
     display: flex;
     flex-direction:column;
     align-items: center;
     text-align: center;
     background-color: black;
-    padding: 20px;
 }
 
 .about_title {
@@ -18,10 +31,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: purple double 5px;
     margin: 35px;
     border-radius: 50px;
+    padding: 20px;
+    border: purple double 5px;
     box-shadow: 5px 5px 20px 15px aqua;
+    padding: 20px;
 }
 
 .bio_name {
@@ -33,21 +48,39 @@
 
 .bio {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: blueviolet;
     padding: 10px;
     margin: 5px;
+    font-size: 3.5vmin;
+    color: blueviolet;
 } 
 
 .links_container {
     display: flex;
     flex-direction: row;
+    width: 100%;
     margin: 5px;
+    justify-content: space-around;
 }
 
-.bio_logos {
+.bio_logos_gh, .bio_logos_li {
     height: 50px;
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin: 15px;
 }
 
+.bio_logos_gh:hover {
+  border-radius: 300px;
+  box-shadow: 2px 1px 15px 10px var(--e-color);
+  background-color: var(--e-color);
+}
+
+.bio_logos_li:hover {
+  border-radius: 300px;
+  box-shadow: 2px 1px 10px 15px var(--h-color);
+  background-color: var(--h-color);
+}
+
+.linebreak {
+    width: 100%;
+}

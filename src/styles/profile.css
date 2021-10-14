@@ -29,37 +29,52 @@ html {
   justify-items: center;
   text-align: center;
   background-color: black;
-  font-family: 'Permanent Marker';
-  font-size: 3vmin;
   color: var(--i-color);
 }
 
 .profile_pic,
 .user_img {
-  border: 5px var(--a-color) solid;
   margin-top: 8vmin;
   border-radius: 200px;
   align-self: center;
+  border: 5px var(--a-color) solid;
   box-shadow: var(--a-color) 0 -1px 4px, var(--b-color) 0 -2px 50px,
     var(--c-color) 0 -10px 50px, var(--d-color) 0 -18px 40px,
     7px 7px 9px 15px rgba(0, 0, 0, 0);
 }
 
 .user_img:hover {
-  border: 5px var(--j-color) solid;
   margin-top: 8vmin;
   border-radius: 200px;
   align-self: center;
+  border: 5px var(--j-color) solid;
   box-shadow: var(--i-color) 0 -1px 4px, var(--j-color) 0 -2px 50px,
     var(--h-color) 0 -10px 50px, var(--g-color) 0 -18px 40px,
     7px 7px 9px 15px rgba(0, 0, 0, 0);
 }
 
-.top_label,
 .profile_name {
+  font-size: 10vmin;
+  font-family: 'Streamster';
+  text-align: center;
   text-shadow: 5px 8px 10px var(--c-color);
+  color: var(--j-color);
+}
+
+.top_label {
+  font-size: 10vmin;
+  font-family: 'Streamster';
+  text-align: center;
+  text-shadow: 5px 8px 10px var(--d-color);
+  color: var(--b-color);
+}
+
+.user_name {
+  font-size: 12vmin;
+  font-family: 'Streamster';
+  text-align: center;
   color: var(--h-color);
-  font-size: 2rem;
+  text-shadow: 5px 8px 10px var(--g-color);
 }
 
 .artists_list {
@@ -86,14 +101,16 @@ html {
 
 .artist_name {
   padding-bottom: 10px;
-  font-family: 'Permanent Marker';
-  font-size: 2rem;
+  font-size: 5vmin;
+  font-family: 'Streamster';
+  text-align: center;
   text-shadow: 5px 8px 10px var(--h-color);
+  color: var(--b-color);
 }
 
 a {
-  color: var(--e-color);
   text-decoration: wavy;
+  color: var(--e-color);
 }
 
 .spotify_icon {
@@ -102,18 +119,18 @@ a {
 }
 
 .artist_img:hover,
-.user_item_img:hover,
 .pass_btn:hover {
-  box-shadow: 2px 1px 20px 15px var(--b-color);
   border-radius: 200px;
-  background-color: var(--h-color);
+  box-shadow: 2px 1px 20px 15px var(--a-color);
+  background-color: var(--b-color);
 }
 
 .spotify_icon:hover,
+.user_item_img:hover,
 .msg_btn:hover {
-  box-shadow: 2px 1px 20px 15px var(--i-color);
   border-radius: 200px;
-  background-color: var(--h-color);
+  box-shadow: 2px 1px 20px 15px var(--j-color);
+  background-color: var(--i-color);
 }
 
 .match_nav {
@@ -139,3 +156,9 @@ a {
   justify-self: center;
   justify-items: center;
 }
+
+.linebreak {
+  width: 100%;
+}
+
+

@@ -12,38 +12,40 @@ body {
 }
 
 html, body {
+    background-color: black;
     height: 100%;
     width: 100%;
-    background-color: black;
 }
 
-.signin_body {
+.login_body {
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     text-align: center;
     background-color: black;
 }
 
-.signin_btn {
-    font-family: 'Larabiefont';
-    font-size: 4.5vmin;
-    font-weight: 900;
+.login_btn {
+    align-items: center;
     justify-content: center;
     align-self: center;
     text-align: center;
     padding: 1rem;
     margin: 10vmin;
+    border-radius: 20px;
     border-radius: 300px;
+    font-family: 'Larabiefont';
+    font-size: 4.5vmin;
+    font-weight: 900;
+    background-color: var(--h-color);
     border: 5px solid var(--j-color);
     box-shadow: 2px 1px 20px 15px var(--j-color);
     color: var(--a-color);
-    background-color: var(--h-color);
 }
 
-.signin_btn:hover {
+.login_btn:hover {
   cursor: pointer;
   border-radius: 300px;
   background-color: var(--b-color);

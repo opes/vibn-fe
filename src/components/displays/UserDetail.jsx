@@ -6,16 +6,14 @@ import pass from '../../assets/pass-icon.png';
 import msg from '../../assets/msg-user-icon.png';
 import Header from './Header';
 import { useParams, Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import useArtists from '../../hooks/useArtists';
+import useUserArtists from '../../hooks/useUserArtists';
 
 const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 
 export default function UserDetail() {
   const { id } = useParams();
-  console.log(id);
   const { userObject, loading } = useOtherUser(id);
-  const { artistsArray } = useUserArtists(localStorage.getItem('ACCESS_TOKEN'));
+  const { userArtists } = useUserArtists(id);
 
   if (loading) return <img className={styles.spinner} src={spinner} alt="spinner" />;
 
@@ -42,38 +40,29 @@ export default function UserDetail() {
         </Link>
       </section>
 
-      <img src={linebreak} alt="linebreak" />
+      <img src={linebreak} alt="linebreak" className={styles.linebreak} />
       <h3 className={styles.top_label}>
-        {userObject.displayName}&apos;s Top Artists
+        Their Top Artists
       </h3>
 
       <section className={styles.artists_container}>
         <ul className={styles.artists_list}>
-          {artistsArray
-            ? artistsArray.map((artist) => (
+          {userArtists
+            ? userArtists.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
-                <a href={artist.external_urls.spotify} alt={artist.name}>
-                  <img className={styles.artist_img} src={artist.images[1].url} />
+                <a href={artist.artistUrl} alt={artist.artistName}>
+                  <img className={styles.artist_img} src={artist.artistImage} />
                 </a>
                 <p className={styles.artist_name}>
-                  {artist.name}
+                  {artist.artistName}
                 </p>
               </li>
             ))
             : 'No Top Artists Found'}
+
         </ul>
       </section>
     </div>
   );
 }
 
-UserDetail.propTypes = {
-  artists: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      image: PropTypes.string,
-      spotify: PropTypes.string,
-      id: PropTypes.string,
-    })
-  ),
-};
