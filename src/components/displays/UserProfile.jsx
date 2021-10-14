@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
@@ -15,22 +14,6 @@ export default function UserProfile() {
   useEffect(() => {
     postUserArtists(artistsArray);
   }, [artistsArray]);
-
-  // const userArtistJoin = async (id) => {
-  //   const res = await fetch(`http://localhost:7890/api/v1/user/artists/${id}/topart`);
-  //   const userArtists = await res.json();
-
-  //   return userArtists;
-  // };
-
-  // if (userObject) {
-  //   if(!(userArtistJoin(userObject.id))) {
-      
-  //     postUserArtists(artists);
-  //   } else {
-  //     console.log('waiting for user...');
-  //   }
-  // }
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -59,7 +42,7 @@ export default function UserProfile() {
 
       <section className={styles.artists_container}>
         <ul className={styles.artists_list}>
-          {userObject
+          {artistsArray
             ? artistsArray.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
                 <a href={artist.external_urls.spotify} alt={artist.name}>
@@ -76,14 +59,3 @@ export default function UserProfile() {
     </div>
   );
 }
-
-UserProfile.propTypes = {
-  artists: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      image: PropTypes.string,
-      spotify: PropTypes.string,
-      id: PropTypes.string,
-    })
-  ),
-};
