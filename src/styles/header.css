@@ -33,7 +33,7 @@ header {
 
 .aicon:hover, .bicon:hover, .cicon:hover, .cvicon:hover {
     border-radius: 20px;
-    background-color: rgb(0, 119, 223);
     border: none;
+    background-color: rgb(0, 119, 223);
     box-shadow: 2px 2px 10px 5px rgb(0, 119, 223);
 }

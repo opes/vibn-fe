@@ -1,3 +1,5 @@
+
+
 body {
     background-color: black;
   --a-color: #f72585ff;
@@ -31,11 +33,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: purple double 5px;
     margin: 35px;
     border-radius: 50px;
-    box-shadow: 5px 5px 20px 15px aqua;
     padding: 20px;
+    border: purple double 5px;
+    box-shadow: 5px 5px 20px 15px aqua;
 }
 
 .bio_name {
@@ -47,10 +49,10 @@ body {
 
 .bio {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: blueviolet;
     padding: 10px;
     margin: 5px;
     font-size: 3.5vmin;
+    color: blueviolet;
 } 
 
 .links_container {
@@ -69,15 +71,15 @@ body {
 }
 
 .bio_logos_gh:hover {
+  border-radius: 300px;
   box-shadow: 2px 1px 15px 10px var(--e-color);
   background-color: var(--e-color);
-  border-radius: 300px;
 }
 
 .bio_logos_li:hover {
+  border-radius: 300px;
   box-shadow: 2px 1px 10px 15px var(--h-color);
   background-color: var(--h-color);
-  border-radius: 300px;
 }
 
 .linebreak {

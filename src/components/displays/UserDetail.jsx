@@ -43,7 +43,7 @@ export default function UserDetail() {
 
       <img src={linebreak} alt="linebreak" className={styles.linebreak} />
       <h3 className={styles.top_label}>
-        {userObject.displayName}&apos;s Top Artists
+        Their Top Artists
       </h3>
 
       <section className={styles.artists_container}>
