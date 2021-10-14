@@ -47,7 +47,6 @@ export const postUserArtists = async (payload) => {
     }),
   });
 
-
   const body = await res.json();
   return body;
 };
