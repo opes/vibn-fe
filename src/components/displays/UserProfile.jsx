@@ -57,13 +57,11 @@ export default function UserProfile() {
           {artists
             ? artists.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
-                <p>
+                <a href={artist.external_urls.spotify} alt={artist.name}>
                   <img className={styles.artist_img} src={artist.images[1].url} />
-                </p>
+                </a>
                 <p className={styles.artist_name}>
-                  <a href={artist.external_urls.spotify} alt={artist.name}>
-                    {artist.name}
-                  </a>
+                  {artist.name}
                 </p>
               </li>
             ))

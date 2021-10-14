@@ -14,20 +14,18 @@ export default function UserDetail() {
 
   if (loading) return <h3>Loading</h3>;
 
-
-  console.log('---other user object----', userObject);
   return (
     <div className={styles.profile_main}>
       <Header />
       <section className={styles.profile}>
-        <img
-          className={styles.profile_pic}
-          alt="user image"
-          src={userObject.image}
-        />
         <a href={userObject.profileURL} className={styles.profile_link}>
-          <h2 className={styles.profile_name}>{userObject.displayName}</h2>
+          <img
+            className={styles.user_img}
+            alt="user image"
+            src={userObject.image}
+          />
         </a>
+        <h2 className={styles.user_name}>{userObject.displayName}</h2>
       </section>
 
       <img src={linebreak} alt="linebreak" />
