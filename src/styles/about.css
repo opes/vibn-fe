@@ -1,4 +1,5 @@
 body {
+    background-color: black;
   --a-color: #f72585ff;
   --b-color: #b5179eff;
   --c-color: #7209b7ff;
@@ -17,7 +18,6 @@ body {
     align-items: center;
     text-align: center;
     background-color: black;
-    padding: 20px;
 }
 
 .about_title {
@@ -35,6 +35,7 @@ body {
     margin: 35px;
     border-radius: 50px;
     box-shadow: 5px 5px 20px 15px aqua;
+    padding: 20px;
 }
 
 .bio_name {
