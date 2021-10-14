@@ -58,6 +58,7 @@ html, body {
     width: 42vmin;
     height: 34vmin;
     padding: 3rem;
+    align-self: center;
 }
 
 .vibn_desc {
