@@ -1,6 +1,5 @@
 import React from 'react';
 import useOtherUser from '../../hooks/useOtherUser';
-// import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
 import pass from '../../assets/pass-icon.png';
@@ -11,10 +10,12 @@ import PropTypes from 'prop-types';
 import useArtists from '../../hooks/useArtists';
 const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 
+const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
+
 export default function UserDetail() {
   const { id } = useParams();
   const { userObject, loading } = useOtherUser(id);
-  const { artistsArray } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
+  const { artistsArray } = useUserArtists(localStorage.getItem('ACCESS_TOKEN'));
 
   if (loading) return <img className={styles.spinner} src={spinner} alt="spinner" />;
 
