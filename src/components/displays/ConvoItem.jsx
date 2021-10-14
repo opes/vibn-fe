@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchCurrentUserById } from '../../services/userAuth';
+import { fetchUserById } from '../../services/userAuth';
 import PropTypes from 'prop-types';
 
 export default function ConvoItem({ item, id }) {
@@ -13,9 +13,9 @@ export default function ConvoItem({ item, id }) {
   }
 
   useEffect(() => {
-    fetchCurrentUserById(item.toUser)
+    fetchUserById(item.toUser)
       .then((user) => setToUser(user))
-      .then(fetchCurrentUserById(id))
+      .then(fetchUserById(id))
       .then((currentUser) => setFromUser(currentUser))
       .finally(() => setLoading(false));
   }, []);

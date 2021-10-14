@@ -23,7 +23,7 @@ export default function App() {
           <Route exact path="/users">
             <UserList />
           </Route>
-          <Route exact path="/user/users/:userid">
+          <Route exact path="/users/:id">
             <UserDetail />
           </Route>
           <Route exact path="/user/:id/conversations">

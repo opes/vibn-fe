@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../styles/signin.css';
+import vibn from '../../assets/vibn.png';
 
 export default function Login() {
   const handleSubmit = (event) => {
@@ -10,7 +11,7 @@ export default function Login() {
 
   return (
     <div className={styles.signin_body}>
-      <h2 className={styles.vibn}>vibn</h2>
+      <img className={styles.vibn_logo} src={vibn} alt="vibn logo" />
       <p className={styles.vibn_desc}>Find your music match</p>
       <form onSubmit={handleSubmit}>
         <button className={styles.signin_btn}>Sign in with Spotify</button>

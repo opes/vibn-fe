@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { fetchUserById } from '../services/userAuth';
 
-export default function useLoggedInUser() {
+export default function useOtherUser(id) {
   const [userObject, setUserObject] = useState(null);
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
-    fetchUserById(localStorage.getItem('CURRENT_USER_ID'))
+    fetchUserById(id)
       .then((user) => setUserObject(user))
       .finally(() => setloading(false));
   }, []);

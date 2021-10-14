@@ -7,7 +7,6 @@ export default function useListOfUsers() {
 
   useEffect(() => {
     fetchAllUsers()
-
       .then((user) => setAllUsers(user))
       .finally(() => setloading(false));
   }, []);

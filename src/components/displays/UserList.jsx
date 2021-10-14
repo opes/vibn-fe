@@ -23,11 +23,8 @@ export default function UserList() {
       <ul className={styles.users_container}>
         {allUsers.map((user) => (
           <li className={styles.userlist} key={user.id}>
-            <Link to="/users/:id">
-              <UserItem
-                displayName={user.displayName}
-                image={user.image}
-              />
+            <Link to={`/users/${user.id}`} >
+              <UserItem displayName={user.displayName} image={user.image} />
             </Link>
           </li>
         ))}

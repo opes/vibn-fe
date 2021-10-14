@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { fetchCurrentUserById } from '../services/userAuth';
+import { fetchUserById } from '../services/userAuth';
 
 export default function useCreateConvo(id) {
   const [convo, setConvo] = useState([]);
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
-    fetchCurrentUserById(id)
+    fetchUserById(id)
       .then((convo) => setConvo(convo))
       .finally(() => setloading(false));
   }, []);

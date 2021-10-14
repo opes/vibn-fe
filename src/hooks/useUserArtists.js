@@ -6,7 +6,7 @@ export default function useUserArtists(id) {
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
-    fetchTopArtists(id)
+    fetchUserArtists(id)
       .then((userArtistArray) => setUserArtists(userArtistArray))
       .finally(() => setloading(false));
   }, []);
