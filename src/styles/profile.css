@@ -130,3 +130,12 @@ a {
   height: 10vmin;
   padding: 5px;
 }
+
+.spinner {
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}

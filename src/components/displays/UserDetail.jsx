@@ -7,14 +7,16 @@ import msg from '../../assets/msg-user-icon.png';
 import Header from './Header';
 import { useParams, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import useUserArtists from '../../hooks/useUserArtists';
+import useArtists from '../../hooks/useArtists';
+
+const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 
 export default function UserDetail() {
   const { id } = useParams();
   const { userObject, loading } = useOtherUser(id);
   const { artistsArray } = useUserArtists(localStorage.getItem('ACCESS_TOKEN'));
 
-  if (loading) return <h3>Loading</h3>;
+  if (loading) return <img className={styles.spinner} src={spinner} alt="spinner" />;
 
   return (
     <div className={styles.profile_main}>

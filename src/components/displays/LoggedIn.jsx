@@ -19,7 +19,7 @@ export default function LoggedIn({ match }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // window.location.href = 'https://vibn.netlify.app/user/:id/dash';
+    // history.push(`https://vibn.netlify.app/user/${userObject.id}/dash`);
     history.push(`/user/${userObject.id}/dash`);
   };
 

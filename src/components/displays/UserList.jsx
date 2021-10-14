@@ -7,13 +7,14 @@ import UserItem from './UserItem';
 import useListOfUsers from '../../hooks/useListOfUsers';
 import linebreak from '../../assets/linebreak.png';
 // import useUserArtists from '../../hooks/useUserArtists';
+const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 
 export default function UserList() {
   const { allUsers, loading } = useListOfUsers();
   // const { userArtists } = useUserArtists(localStorage.getItem('CURRENT_USER_ID'));
   // console.log(userArtists ? userArtists : 'the rain in spain stays mainly on the plane');
 
-  if (loading) return <h1>Loading...</h1>;
+  if (loading) return <img className={styles.spinner} src={spinner} alt="spinner" />;
 
   return (
     <div>
