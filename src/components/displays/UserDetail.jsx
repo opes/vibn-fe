@@ -1,6 +1,5 @@
 import React from 'react';
 import useOtherUser from '../../hooks/useOtherUser';
-// import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
 import pass from '../../assets/pass-icon.png';
@@ -8,12 +7,12 @@ import msg from '../../assets/msg-user-icon.png';
 import Header from './Header';
 import { useParams, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import useArtists from '../../hooks/useArtists';
+import useUserArtists from '../../hooks/useUserArtists';
 
 export default function UserDetail() {
   const { id } = useParams();
   const { userObject, loading } = useOtherUser(id);
-  const { artistsArray } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
+  const { artistsArray } = useUserArtists(localStorage.getItem('ACCESS_TOKEN'));
 
   if (loading) return <h3>Loading</h3>;
 
