@@ -26,16 +26,16 @@ export default function App() {
           <Route exact path="/users/:id">
             <UserDetail />
           </Route>
-          <Route exact path="/user/:id/conversations">
+          <Route exact path="/convo/:id/conversations">
             <Conversations />
           </Route>
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/user/create/convo/:id">
+          <Route exact path="/convo/create/:id/">
             <CreateConvo />
           </Route>
-          <Route exact path="/user/convo/detail/:id">
+          <Route exact path="/convo/:id/detail/:convoId">
             <ConvoDetail />
           </Route>
         </Switch>

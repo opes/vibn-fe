@@ -3,14 +3,18 @@ import useOtherUser from '../../hooks/useOtherUser';
 // import useArtists from '../../hooks/useArtists';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
+import pass from '../../assets/pass-icon.png';
+import msg from '../../assets/msg-user-icon.png';
 import Header from './Header';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import useArtists from '../../hooks/useArtists';
 
 export default function UserDetail() {
   const { id } = useParams();
+  console.log(id);
   const { userObject, loading } = useOtherUser(id);
-  // const { artists } = userObject && useArtists(userObject.id);
+  const { artistsArray } = useArtists(localStorage.getItem('ACCESS_TOKEN'));
 
   if (loading) return <h3>Loading</h3>;
 
@@ -28,29 +32,36 @@ export default function UserDetail() {
         <h2 className={styles.user_name}>{userObject.displayName}</h2>
       </section>
 
+      <section className={styles.match_nav}>
+        <Link to="/users">
+          <img src={pass} className={styles.pass_btn} />
+        </Link>
+        <Link to={`/convo/create/${id}/`}>
+          <img src={msg} className={styles.msg_btn} />
+        </Link>
+      </section>
+
       <img src={linebreak} alt="linebreak" />
       <h3 className={styles.top_label}>
         {userObject.displayName}&apos;s Top Artists
       </h3>
 
-      {/* <section className={styles.artists_container}>
+      <section className={styles.artists_container}>
         <ul className={styles.artists_list}>
-          {artists
-            ? artists.map((artist) => (
+          {artistsArray
+            ? artistsArray.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
-                <p>
+                <a href={artist.external_urls.spotify} alt={artist.name}>
                   <img className={styles.artist_img} src={artist.images[1].url} />
-                </p>
+                </a>
                 <p className={styles.artist_name}>
-                  <a href={artist.external_urls.spotify} alt={artist.name}>
-                    {artist.name}
-                  </a>
+                  {artist.name}
                 </p>
               </li>
             ))
             : 'No Top Artists Found'}
         </ul>
-      </section> */}
+      </section>
     </div>
   );
 }

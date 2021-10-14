@@ -1,52 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchUserById } from '../../services/userAuth';
-import PropTypes from 'prop-types';
 
-export default function ConvoItem({ item, id }) {
-  const [toUser, setToUser] = useState({});
+export default function ConvoItem({ convo }) {
   const [fromUser, setFromUser] = useState({});
   const [loading, setLoading] = useState(true);
+console.log(convo)
+  const currentUserId = localStorage.getItem('CURRENT_USER_ID');
 
+  useEffect(() => {
+    fetchUserById(convo.from_user)
+    .then((user) => setFromUser(user))
+    .finally(() => setLoading(false))
+  }, []);
+  
   if (loading) {
     return <h1>Loading...</h1>;
   }
 
-  useEffect(() => {
-    fetchUserById(item.toUser)
-      .then((user) => setToUser(user))
-      .then(fetchUserById(id))
-      .then((currentUser) => setFromUser(currentUser))
-      .finally(() => setLoading(false));
-  }, []);
-
   return (
-    <Link to={`/user/convo/detail/${item.id}`}>
+    <Link to={`/convo/${currentUserId}/detail/${convo.id}`}>
       <div>
         <h4>
             from: {fromUser.displayName}
-            to: {toUser.displayName}
         </h4>
       </div>
       <article>
         <h2>
-          {item.date}
+          {convo.date}
         </h2>
         <p>
-          {item.message}
+          {convo.message}
         </p>
       </article>        
     </Link>
   );
 }
-
-ConvoItem.propTypes = {
-  item: PropTypes.shape({
-    id: PropTypes.string,
-    toUser: PropTypes.string,
-    fromUser: PropTypes.string,
-    message: PropTypes.string,
-    date: PropTypes.string,
-  }),
-  id: PropTypes.string,
-};
