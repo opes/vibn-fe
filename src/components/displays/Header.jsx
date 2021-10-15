@@ -10,12 +10,22 @@ import styles from '../../styles/header.css';
 const currentUserId = localStorage.getItem('CURRENT_USER_ID')
 
 export default class Header extends Component {
+
+  handleSignout = (event) => {
+    event.preventDefault();
+    localStorage.setItem('REFRESH_TOKEN', '');
+    localStorage.setItem('ACCESS_TOKEN', '');
+    localStorage.setItem('CURRENT_USER_ID', '');
+    window.localStorage.clear();
+    window.location.href = '/';
+  };
+
   render() {
     return (
       <header>
         <div className={styles.nav_links}>
           <div className={styles.icon}>
-            <Link to="/">
+            <Link onClick={this.handleSignout} to="/">
               <img className={styles.bicon} src={logout_icon} />
             </Link>
           </div>
@@ -25,7 +35,11 @@ export default class Header extends Component {
             </Link>
           </div>
           <Link to="/about">
-            <img className={styles.vibn_logo} src={vibn} alt="Go to your Spotify" />
+            <img
+              className={styles.vibn_logo}
+              src={vibn}
+              alt="Go to your Spotify"
+            />
           </Link>
           <div className={styles.icon}>
             <Link to={`/convo/${currentUserId}/conversations`}>

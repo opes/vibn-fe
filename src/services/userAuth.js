@@ -49,3 +49,11 @@ export const postUserArtists = async (payload) => {
   const body = await res.json();
   return body;
 };
+
+export const logout = async () => {
+  const data = await fetch(`${URL}/`).send({
+    email: '',
+    password: '',
+  });
+  return data.body;
+};
