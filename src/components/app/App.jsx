@@ -26,14 +26,14 @@ export default function App() {
           <Route exact path="/users/:id">
             <UserDetail />
           </Route>
-          <Route exact path="/convo/:id/conversations">
+          <Route exact path="/create/:id/">
+            <CreateConvo />
+          </Route>
+          <Route path="/convo/:id/conversations">
             <Conversations />
           </Route>
           <Route exact path="/about">
             <About />
-          </Route>
-          <Route exact path="/convo/create/:id/">
-            <CreateConvo />
           </Route>
           <Route exact path="/convo/:id/detail/:convoId">
             <ConvoDetail />

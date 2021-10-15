@@ -43,7 +43,7 @@ export default function CreateConvo() {
       date: today,
     });
 
-    history.push(`http://localhost:7891/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
+    history.push(`/convo/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
     // history.push(`https://vib.netlify.app/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
   };
 

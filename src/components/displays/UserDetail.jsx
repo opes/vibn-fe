@@ -35,7 +35,7 @@ export default function UserDetail() {
         <Link to="/users">
           <img src={pass} className={styles.pass_btn} />
         </Link>
-        <Link to={`/convo/create/${id}/`}>
+        <Link to={`/create/${id}/`}>
           <img src={msg} className={styles.msg_btn} />
         </Link>
       </section>
