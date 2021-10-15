@@ -6,7 +6,7 @@ import Header from '../displays/Header';
 import linebreak from '../../assets/linebreak.png';
 import elise from '../../assets/elise-img.jpg';
 import bri from '../../assets/bri-img.png';
-import sofia from '../../assets/sofia-img.jpg';
+import sofia from '../../assets/sofia-img.png';
 
 export default class About extends Component {
   render() {
