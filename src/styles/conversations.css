@@ -41,6 +41,15 @@ body {
   padding: 10px;
 }
 
+.from_name {
+  font-size: 6vmin;
+  font-family: 'Streamster', 'Permanent Marker', cursive;
+  text-align: center;
+  color: var(--i-color);
+  text-shadow: 5px 8px 10px var(--c-color);
+  padding: 10px;
+}
+
 .message_p {
     font-size: 5.5vmin;
     text-align: center;
