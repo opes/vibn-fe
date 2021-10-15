@@ -21,8 +21,8 @@ export default function LoggedIn({ match }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // history.push(`https://vibn.netlify.app/user/${userObject.id}/dash`);
-    history.push(`/user/${userObject.id}/dash`);
+    history.push(`https://vibn.netlify.app/user/${userObject.id}/dash`);
+    // history.push(`/user/${userObject.id}/dash`);
   };
 
   return (
