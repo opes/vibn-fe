@@ -4,7 +4,6 @@ export const fetchUserConvosByUserId = async (id) => {
     `https://vibn.herokuapp.com/api/v1/users/convos/${id}/convo`
   );
   const userAndConvos = await res.json();
-
   return userAndConvos;
 };
 
