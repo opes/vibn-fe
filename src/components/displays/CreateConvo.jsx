@@ -49,7 +49,6 @@ export default function CreateConvo() {
       date: today,
     });
 
-    // history.push(`/convo/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
     history.push(`/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
   };
 

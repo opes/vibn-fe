@@ -27,14 +27,6 @@ export default function ConvoItem({ convo }) {
           {fromUser.displayName}
         </h4>
       </div>
-      {/* <article className={styles.message_container}>
-        <h2 className={styles.date}>
-          {convo.date}
-        </h2>
-        <p className={styles.message_p}>
-          {convo.message}
-        </p>
-      </article>         */}
     </Link>
   );
 }
