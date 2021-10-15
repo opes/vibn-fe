@@ -4,6 +4,7 @@ import { fetchUserById } from '../../services/userAuth';
 import { useParams, useHistory } from 'react-router-dom';
 import Header from './Header';
 import styles from '../../styles/createmsg.css';
+import linebreak from '../../assets/linebreak.png';
 
 export default function CreateConvo() {
   const [today, setToday] = useState('');
@@ -61,6 +62,7 @@ export default function CreateConvo() {
     <div className={styles.create_container}>
       <Header />
       <h1 className={styles.send_msg_header}>Send a message</h1>
+      <img className={styles.linebreak} src={linebreak} alt="linebreak" />
       <form 
         className={styles.create_form} onSubmit={handleSubmit}>
         <h2 className={styles.to_name_header}>

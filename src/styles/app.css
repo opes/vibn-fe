@@ -1,4 +1,4 @@
-:root {
+:global #root {
   --a-color: #f72585ff;
   --b-color: #b5179eff;
   --c-color: #7209b7ff;
