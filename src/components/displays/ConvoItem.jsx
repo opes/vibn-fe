@@ -24,17 +24,17 @@ export default function ConvoItem({ convo }) {
     <Link to={`/convo/${currentUserId}/detail/${convo.id}`}>
       <div className={styles.convo_container}>
         <h4 className={styles.from_name}>
-            from: {fromUser.displayName}
+            {fromUser.displayName}
         </h4>
       </div>
-      <article className={styles.message_container}>
+      {/* <article className={styles.message_container}>
         <h2 className={styles.date}>
           {convo.date}
         </h2>
         <p className={styles.message_p}>
           {convo.message}
         </p>
-      </article>        
+      </article>         */}
     </Link>
   );
 }
