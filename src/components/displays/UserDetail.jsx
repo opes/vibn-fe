@@ -6,7 +6,6 @@ import pass from '../../assets/pass-icon.png';
 import msg from '../../assets/msg-user-icon.png';
 import Header from './Header';
 import { useParams, Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import useUserArtists from '../../hooks/useUserArtists';
 
 const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
