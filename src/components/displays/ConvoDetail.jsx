@@ -17,7 +17,7 @@ export default function ConvoDetail() {
     getSingleConvo(convoId)
       .then((oneConvo) => setConversation(oneConvo));
   }, []);
-
+  console.log(conversation, '======CONVERSATION========');
   useEffect(() => {
     fetchUserById(conversation.fromUser)
       .then((user) => setFromUser(user))
