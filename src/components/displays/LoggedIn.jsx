@@ -16,12 +16,9 @@ export default function LoggedIn({ match }) {
   // then we update state
   const { userObject } = useUsers();
 
-  console.log('DA USERZZZZZZZ');
-  console.log(userObject ? userObject : 'you suck');
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    history.push(`https://vibn.netlify.app/user/${userObject.id}/dash`);
+    history.push(`/user/${userObject.id}/dash`);
     // history.push(`/user/${userObject.id}/dash`);
   };
 
