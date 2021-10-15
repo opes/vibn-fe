@@ -21,7 +21,7 @@ body {
 
 .send_msg_header {
   color: var(--a-color);
-  text-shadow: var(--h-color);
+  text-shadow: 5px 5px 20px var(--h-color);
   font-family: 'Streamster', 'Permanent Marker';
   font-size: 10vmin;
 }
@@ -40,6 +40,7 @@ body {
   font-family: 'Streamster', 'Permanent Marker';
   color: var(--i-color);
   text-shadow: 5px 5px 20px var(--f-color);
+  font-size: 7vmin;
 }
 
 .msg_input {
@@ -53,6 +54,7 @@ body {
   border: 5px solid var(--j-color);
   border-radius: 20px;
   box-shadow: 1px 1px 10px 10px var(--i-color);
+  overflow: hidden;
 }
 
 .send_btn {
@@ -73,4 +75,5 @@ body {
   box-shadow: 1px 1px 20px 10px var(--j-color);
   color: var(--f-color);
   border: 5px solid var(--j-color);
+  cursor: pointer;
 }
