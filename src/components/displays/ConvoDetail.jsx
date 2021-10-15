@@ -3,7 +3,7 @@ import { getSingleConvo } from '../../services/convos.js';
 import { fetchUserById } from '../../services/userAuth.js';
 import { useParams } from 'react-router-dom';
 import Header from './Header.jsx';
-// import styles from '../../assets/conversations.css';
+import styles from '../../assets/conversations.css';
 const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 
 export default function ConvoDetail() {
@@ -28,21 +28,21 @@ export default function ConvoDetail() {
   }
 
   return (
-    <>
+    <div className={styles.convo_container}>
       <Header />
       <div>
-        <h4>
+        <h4 className={styles.from_name}>
               from: {fromUserObject.displayName}
         </h4>
       </div>
-      <article>
-        <h2>
+      <article className={styles.message_container}>
+        <h2 className={styles.date}>
           {conversation.date}
         </h2>
-        <p>
+        <p className={styles.message_p}>
           {conversation.message}
         </p>
       </article>  
-    </>           
+    </div>           
   );
 }
