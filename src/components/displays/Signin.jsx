@@ -6,7 +6,7 @@ import linebreak from '../../assets/linebreak.png';
 export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    history.push.href = 'https://vibn.herokuapp.com/api/v1/auth/login';
+    window.location.href = 'https://vibn.herokuapp.com/api/v1/auth/login';
     // window.location.href = 'http://localhost:7890/api/v1/auth/login';
   };
 
