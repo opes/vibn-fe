@@ -32,8 +32,8 @@ export default function ConvoDetail() {
       <Header />
       <div>
         <h4 className={styles.from_container}>
-          <p className={styles.from_item}>from: {fromUserObject.displayName}</p>
-          <p className={styles.from_item}>date: {conversation.date}</p>
+          <p className={styles.from_item}>From: {fromUserObject.displayName}</p>
+          <p className={styles.from_item}>Date: {conversation.date}</p>
         </h4>
       </div>
       <article className={styles.message_container}>
