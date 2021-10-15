@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { postToConvos } from '../../services/convos';
 import { fetchUserById } from '../../services/userAuth';
-import PropTypes from 'prop-types';
+import { useParams, useHistory } from 'react-router-dom';
+import Header from './Header';
 
-export default function CreateConvo({ match }) {
+export default function CreateConvo() {
   const [today, setToday] = useState('');
-  const currentUserId = localStorage.getItem('CURRENT_USER_ID');
-  const toUser = fetchUserById(match.params.id);
-  const [message, setMessage] = useState();
+  const [toUser, setToUser] = useState({});
+  const [fromUser, setFromUser] = useState({});
+  const [message, setMessage] = useState('');
 
   const createDate = () => {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -16,20 +17,34 @@ export default function CreateConvo({ match }) {
     return date;
   };
 
-  setToday(createDate());
+  const history = useHistory();
+
+  const currentUserId = localStorage.getItem('CURRENT_USER_ID');
+  const { id } = useParams();
+
+  useEffect(() => {
+    fetchUserById(currentUserId)
+      .then((user) => setFromUser(user));
+  }, []);
+
+  useEffect(() => {
+    fetchUserById(id)
+      .then((user) => setToUser(user))
+      .finally(() => setToday(createDate()));
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     await postToConvos({
-      toUser: match.params.id,
-      fromUser: currentUserId,
+      toUser: toUser.id,
+      fromUser: fromUser.id,
       message,
       date: today,
     });
 
-    // history.push(`http://localhost:7891/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
-    history.push(`https://vib.netlify.app/user/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
+    // history.push(`/convo/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
+    history.push(`https://vib.netlify.app/convo/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
   };
 
   const handleTextChange = async (event) => {
@@ -39,9 +54,10 @@ export default function CreateConvo({ match }) {
 
   return (
     <div>
+      <Header />
       <h1>Send a message</h1>
       <form onSubmit={handleSubmit}>
-        <h2>Your message to {toUser.diplayName}</h2>
+        <h2>Your message to {toUser.displayName}</h2>
         <textarea placeholder="hey, how's the weather, you like kpop too?!" onChange={handleTextChange} ></textarea>
         <span>
           <button>Send</button>
@@ -50,14 +66,3 @@ export default function CreateConvo({ match }) {
     </div>
   );
 }
-
-CreateConvo.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      access_token: PropTypes.string,
-      refresh_token: PropTypes.string,
-      id: PropTypes.string,
-    }),
-  }),
-};
-

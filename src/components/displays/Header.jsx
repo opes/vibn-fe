@@ -7,6 +7,8 @@ import profile_icon from '../../assets/profile-icon.png';
 import vibn from '../../assets/vibn.png';
 import styles from '../../styles/header.css';
 
+const currentUserId = localStorage.getItem('CURRENT_USER_ID')
+
 export default class Header extends Component {
   render() {
     return (
@@ -26,7 +28,7 @@ export default class Header extends Component {
             <img className={styles.vibn_logo} src={vibn} alt="Go to your Spotify" />
           </Link>
           <div className={styles.icon}>
-            <Link to="/user/:id/conversations">
+            <Link to={`/convo/${currentUserId}/conversations`}>
               <img className={styles.cvicon} src={cv_icon} />
             </Link>
           </div>
