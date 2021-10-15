@@ -29,6 +29,11 @@ export default function UserList() {
           display: 'flex',
           flexDirection: 'row',
           flexWrap: 'wrap',
+          alignContent: 'center',
+          alignItems: 'center',
+          justifyContent: 'center',
+          justifyItems: 'center',
+          fontFamily: 'Streamster',
         }}
       >
         {allUsers.map((user) => (
@@ -39,6 +44,13 @@ export default function UserList() {
               display: 'flex',
               flexDirection: 'row',
               flexWrap: 'wrap',
+              margin: '5px',
+              padding: '5px',
+              alignContent: 'center',
+              alignItems: 'center',
+              justifyContent: 'center',
+              justifyItems: 'center',
+              fontFamily: 'Streamster',
             }}
           >
             <Link to={`/users/${user.id}`}>

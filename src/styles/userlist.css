@@ -20,7 +20,7 @@ body {
 
 .doods {
   font-size: 10vmin;
-  font-family: 'Streamster';
+  font-family: 'Streamster', 'Permanent Marker';
   text-align: center;
   color: var(--b-color);
   text-shadow: 2px 12px 25px var(--j-color);
@@ -40,7 +40,6 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   list-style-type: none;
-  padding: 3rem;
   justify-content: center;
   text-align: center;
 }
@@ -67,7 +66,7 @@ body {
 .user_name {
   padding-bottom: 10px;
   font-size: 6vmin;
-  font-family: 'Streamster';
+  font-family: 'Streamster',  'Permanent Marker';
   text-align: center;
   color: var(--i-color);
   text-shadow: 5px 8px 10px var(--c-color);

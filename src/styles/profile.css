@@ -55,7 +55,7 @@ html {
 
 .profile_name {
   font-size: 10vmin;
-  font-family: 'Streamster';
+  font-family: 'Streamster',  'Permanent Marker';
   text-align: center;
   text-shadow: 5px 8px 10px var(--c-color);
   color: var(--j-color);
@@ -63,7 +63,7 @@ html {
 
 .top_label {
   font-size: 10vmin;
-  font-family: 'Streamster';
+  font-family: 'Streamster',  'Permanent Marker';
   text-align: center;
   text-shadow: 5px 8px 10px var(--d-color);
   color: var(--b-color);
@@ -71,7 +71,7 @@ html {
 
 .user_name {
   font-size: 12vmin;
-  font-family: 'Streamster';
+  font-family: 'Streamster',  'Permanent Marker';
   text-align: center;
   color: var(--h-color);
   text-shadow: 5px 8px 10px var(--g-color);
@@ -102,7 +102,7 @@ html {
 .artist_name {
   padding-bottom: 10px;
   font-size: 5vmin;
-  font-family: 'Streamster';
+  font-family: 'Streamster',  'Permanent Marker';
   text-align: center;
   text-shadow: 5px 8px 10px var(--h-color);
   color: var(--b-color);

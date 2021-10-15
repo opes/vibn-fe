@@ -41,7 +41,7 @@ html, body {
     margin: 10vmin;
     border-radius: 20px;
     border-radius: 300px;
-    font-family: 'Larabiefont';
+    font-family: 'Larabiefont',  'Permanent Marker';
     font-size: 4.5vmin;
     font-weight: 900;
     background-color: var(--i-color);
@@ -59,7 +59,7 @@ html, body {
     margin: 10vmin;
     border-radius: 20px;
     border-radius: 300px;
-    font-family: 'Larabiefont';
+    font-family: 'Larabiefont',  'Permanent Marker';
     font-size: 4.5vmin;
     font-weight: 900;
     background-color: var(--b-color);
@@ -87,7 +87,7 @@ html, body {
 .vibn_desc {
     padding-bottom: 2rem;
     font-size: 2.2rem;
-    font-family: 'Streamster';
+    font-family: 'Streamster',  'Permanent Marker';
     text-align: center;
     color: rgb(128, 0, 255);
 }

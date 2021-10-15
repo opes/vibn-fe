@@ -35,7 +35,7 @@ body, html {
 }
 
 .about_title {
-  font-family: 'Streamster';
+  font-family: 'Streamster',  'Permanent Marker';
   font-size: 10vmin;
   color: rgb(166, 73, 248);
   text-shadow: 8px 10px 15px turquoise;
@@ -56,14 +56,14 @@ body, html {
 
 .bio_name {
   font-size: 10vmin;
-  font-family: 'Streamster';
+  font-family: 'Streamster',  'Permanent Marker';
   color: rgb(0, 115, 255);
   text-shadow: 5px 5px 20px var(--b-color);
   margin: 5px;
 }
 
 .bio {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Larabiefont', 'Permanent Marker', Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px;
   font-size: 3.5vmin;
   color: blueviolet;
