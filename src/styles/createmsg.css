@@ -36,29 +36,33 @@ body {
   align-items: center;
 }
 
-.to-name_header {
+.to_name_header {
   font-family: 'Streamster', 'Permanent Marker';
   color: var(--i-color);
-  text-shadow: var(--f-color);
+  text-shadow: 5px 5px 20px var(--f-color);
 }
 
 .msg_input {
   padding: 5px;
   font-size: 20px;
   height: 100px;
-  width: 80vmin;
+  width: 60vmin;
+  margin: 20px;
   text-align: unset;
-  margin-bottom: 20px;
+  background-color: powderblue;
+  border: 5px solid var(--j-color);
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px 10px var(--i-color);
 }
 
 .send_btn {
   font-family: 'Larabiefont', 'Permanent Marker';
   padding: 5px;
-  margin: 5px;
+  margin: 25px;
   font-size: 25px;
   border-radius: 200px;
   background-color: var(--g-color);
-  box-shadow: 1px 1px 15px 25px var(--g-color);
+  box-shadow: 1px 1px 20px 10px var(--h-color);
   color: var(--a-color);
   border: 5px solid var(--g-color);
   font-weight: bolder;
@@ -66,7 +70,7 @@ body {
 
 .send_btn:hover {
   background-color: var(--j-color);
-  box-shadow: 1px 1px 15px 25px var(--j-color);
+  box-shadow: 1px 1px 20px 10px var(--j-color);
   color: var(--f-color);
   border: 5px solid var(--j-color);
 }
