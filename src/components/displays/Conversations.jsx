@@ -9,8 +9,6 @@ export default function Conversations() {
 
   const currentUserId = localStorage.getItem('CURRENT_USER_ID');
 
-  console.log(conversations);
-
   useEffect(() => {
     fetchMessagesToCurrentUser(currentUserId)
       .then((convos) => setConversations(convos));
@@ -19,7 +17,7 @@ export default function Conversations() {
   return (
     <div className={styles.top_container}>
       <Header />
-      <h1>Your Messages</h1>
+      <h1 className={styles.message_title}>Your Messages</h1>
       <main className={styles.main_container}>
         {conversations.map(item => 
           <ConvoItem 

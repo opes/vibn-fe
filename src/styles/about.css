@@ -20,6 +20,7 @@ body, html {
     height: 100%;
     width: 100%;
     background-color: black;
+    width: 70vmin;
 }
 
 .about_container {
@@ -32,6 +33,13 @@ body, html {
   justify-content: center;
   text-align: center;
   background-color: black;
+  width: 70vmin;
+}
+
+.bri_container, .elise_container, .sofia_container {
+  display: flex;
+  flex-direction: column;
+  width: 70vmin;
 }
 
 .about_title {
@@ -52,6 +60,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  width: 70vmin;
 }
 
 .bio_name {
@@ -72,19 +81,26 @@ body, html {
 .links_container {
   display: flex;
   flex-direction: row;
-  width: 100%;
   margin: 5px;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 70vmin;
 }
 
-.bio_logos_gh,
+.bio_logos_gh {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+}
+
 .bio_logos_li {
   height: 50px;
   display: flex;
   flex-direction: row;
   margin: 15px;
+  filter: brightness(2);
 }
 
 .bio_logos_gh:hover {
@@ -95,8 +111,8 @@ body, html {
 
 .bio_logos_li:hover {
   border-radius: 300px;
-  box-shadow: 2px 1px 10px 15px var(--h-color);
-  background-color: var(--h-color);
+  box-shadow: 2px 1px 10px 15px #6ad257;
+  background-color: #6ad257;
 }
 
 .linebreak {
@@ -118,6 +134,7 @@ body, html {
   background-color: var(--c-color);
   box-shadow: 1px 1px 15px 55px var(--c-color);
   cursor: help;
+  width: 60vmin;
 }
 
 .sofia_bio {
@@ -127,6 +144,7 @@ body, html {
     text-align: center;
     font-family: Larabiefont;
     font-weight: bolder;
+    width: 60vmin;
 }
 
 .elise_bio {
@@ -136,6 +154,7 @@ body, html {
     text-align: center;
     font-family: Larabiefont;
     font-weight: bolder;
+    width: 60vmin;
 }
 
 .bri_bio {
@@ -145,4 +164,5 @@ body, html {
     text-align: center;
     font-family: Larabiefont;
     font-weight: bolder;
+    width: 60vmin;
 }
