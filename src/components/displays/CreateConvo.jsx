@@ -44,7 +44,7 @@ export default function CreateConvo() {
     });
 
     // history.push(`/convo/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
-    history.push(`https://vib.netlify.app/convo/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
+    history.push(`/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
   };
 
   const handleTextChange = async (event) => {
