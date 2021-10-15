@@ -48,10 +48,11 @@ html, body {
 .login_btn:hover {
   cursor: pointer;
   border-radius: 300px;
+  font-weight: 900;
   background-color: var(--b-color);
   box-shadow: 2px 1px 20px 15px var(--a-color);
   border: 5px solid var(--a-color);
-  color: var(--d-color);
+  color: var(--f-color);
 }
 
 .vibn_logo {
