@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchMessagesToCurrentUser } from '../../services/convos';
 import ConvoItem from './ConvoItem';
 import Header from './Header';
-import styles from '../../assets/conversations.css';
+import styles from '../../styles/conversations.css';
 
 export default function Conversations() {
   const [conversations, setConversations] = useState([]);
@@ -17,7 +17,7 @@ export default function Conversations() {
   }, []);
 
   return (
-    <div>
+    <div className={styles.top_container}>
       <Header />
       <h1>Your Messages</h1>
       <main className={styles.main_container}>
