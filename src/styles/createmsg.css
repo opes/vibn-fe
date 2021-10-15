@@ -22,7 +22,7 @@ body {
 .send_msg_header {
   color: var(--a-color);
   text-shadow: 5px 5px 20px var(--h-color);
-  font-family: 'Streamster', 'Permanent Marker';
+  font-family: 'Streamster', 'Permanent Marker', cursive;
   font-size: 10vmin;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .to_name_header {
-  font-family: 'Streamster', 'Permanent Marker';
+  font-family: 'Streamster', 'Permanent Marker', cursive;
   color: var(--i-color);
   text-shadow: 5px 5px 20px var(--f-color);
   font-size: 7vmin;
@@ -58,7 +58,7 @@ body {
 }
 
 .send_btn {
-  font-family: 'Larabiefont', 'Permanent Marker';
+  font-family: 'Larabiefont', Tahoma;
   padding: 5px;
   margin: 25px;
   font-size: 25px;
@@ -76,4 +76,8 @@ body {
   color: var(--f-color);
   border: 5px solid var(--j-color);
   cursor: pointer;
+}
+
+.linebreak {
+  width: 100%;
 }
