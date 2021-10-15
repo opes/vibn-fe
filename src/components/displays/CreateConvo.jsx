@@ -3,6 +3,7 @@ import { postToConvos } from '../../services/convos';
 import { fetchUserById } from '../../services/userAuth';
 import { useParams, useHistory } from 'react-router-dom';
 import Header from './Header';
+import styles from '../../styles/createmsg.css';
 
 export default function CreateConvo() {
   const [today, setToday] = useState('');
@@ -11,7 +12,12 @@ export default function CreateConvo() {
   const [message, setMessage] = useState('');
 
   const createDate = () => {
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    };
     const today = new Date();
     const date = today.toLocaleDateString('en-US', options);
     return date;
@@ -23,8 +29,7 @@ export default function CreateConvo() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetchUserById(currentUserId)
-      .then((user) => setFromUser(user));
+    fetchUserById(currentUserId).then((user) => setFromUser(user));
   }, []);
 
   useEffect(() => {
@@ -53,14 +58,21 @@ export default function CreateConvo() {
   };
 
   return (
-    <div>
+    <div className={styles.create_container}>
       <Header />
-      <h1>Send a message</h1>
-      <form onSubmit={handleSubmit}>
-        <h2>Your message to {toUser.displayName}</h2>
-        <textarea placeholder="hey, how's the weather, you like kpop too?!" onChange={handleTextChange} ></textarea>
+      <h1 className={styles.send_msg_header}>Send a message</h1>
+      <form 
+        className={styles.create_form} onSubmit={handleSubmit}>
+        <h2 className={styles.to_name_header}>
+          Your message to {toUser.displayName}
+        </h2>
+        <textarea
+          className={styles.msg_input}
+          placeholder="hey, how's the weather, you like kpop too?!"
+          onChange={handleTextChange}
+        ></textarea>
         <span>
-          <button>Send</button>
+          <button className={styles.send_btn}>Send</button>
         </span>
       </form>
     </div>
