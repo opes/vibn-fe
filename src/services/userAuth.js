@@ -33,8 +33,8 @@ export const fetchUserArtists = async (id) => {
 };
 
 export const postUserArtists = async (payload) => {
-  // const res = await fetch('http://localhost:7890/api/v1/user/artists/', {
-  const res = await fetch('https://vibn.herokuapp.com/api/v1/user/artists/', {
+  // const res = await fetch('http://localhost:7890/api/v1/artists/', {
+  const res = await fetch('https://vibn.herokuapp.com/api/v1/artists/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
