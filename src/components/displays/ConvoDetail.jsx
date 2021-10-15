@@ -4,7 +4,8 @@ import { fetchUserById } from '../../services/userAuth.js';
 import { useParams } from 'react-router-dom';
 import Header from './Header.jsx';
 import styles from '../../styles/conversations.css';
-const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
+const spinner =
+  'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 
 export default function ConvoDetail() {
   const [conversation, setConversation] = useState({});
@@ -12,17 +13,16 @@ export default function ConvoDetail() {
   const [loading, setLoading] = useState(true);
 
   const { convoId } = useParams();
-  
+
   useEffect(() => {
-    getSingleConvo(convoId)
-      .then((oneConvo) => setConversation(oneConvo));
+    getSingleConvo(convoId).then((oneConvo) => setConversation(oneConvo));
   }, []);
   useEffect(() => {
     fetchUserById(conversation.fromUser)
       .then((user) => setFromUser(user))
       .finally(() => setLoading(false));
   }, [conversation]);
-  
+
   if (loading) {
     return <img src={spinner} alt="spinner" />;
   }
@@ -31,16 +31,14 @@ export default function ConvoDetail() {
     <div className={styles.convo_container}>
       <Header />
       <div>
-        <h4 className={styles.from_name}>
-              from: {fromUserObject.displayName}
-              date: {conversation.date}
+        <h4 className={styles.from_container}>
+          <p className={styles.from_item}>from: {fromUserObject.displayName}</p>
+          <p className={styles.from_item}>date: {conversation.date}</p>
         </h4>
       </div>
       <article className={styles.message_container}>
-        <p className={styles.message_p}>
-          {conversation.message}
-        </p>
-      </article>  
-    </div>           
+        <p className={styles.message_p}>{conversation.message}</p>
+      </article>
+    </div>
   );
 }
