@@ -20,7 +20,7 @@ body, html {
     height: 100%;
     width: 100%;
     background-color: black;
-    width: 70vmin;
+    align-items: center;
 }
 
 .about_container {
@@ -40,6 +40,8 @@ body, html {
   display: flex;
   flex-direction: column;
   width: 70vmin;
+  align-items: center;
+  margin: 10px;
 }
 
 .about_title {
@@ -60,7 +62,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 70vmin;
+  width: 65vmin;
 }
 
 .bio_name {
@@ -134,7 +136,7 @@ body, html {
   background-color: var(--c-color);
   box-shadow: 1px 1px 15px 55px var(--c-color);
   cursor: help;
-  width: 60vmin;
+  width: 50vmin;
 }
 
 .sofia_bio {
@@ -144,7 +146,7 @@ body, html {
     text-align: center;
     font-family: Larabiefont;
     font-weight: bolder;
-    width: 60vmin;
+    width: 50vmin;
 }
 
 .elise_bio {
@@ -154,7 +156,7 @@ body, html {
     text-align: center;
     font-family: Larabiefont;
     font-weight: bolder;
-    width: 60vmin;
+    width: 50vmin;
 }
 
 .bri_bio {
@@ -164,5 +166,5 @@ body, html {
     text-align: center;
     font-family: Larabiefont;
     font-weight: bolder;
-    width: 60vmin;
+    width: 50vmin;
 }

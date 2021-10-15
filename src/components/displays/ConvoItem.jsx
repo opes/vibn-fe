@@ -4,6 +4,7 @@ import { fetchUserById } from '../../services/userAuth';
 // import styles from '../../assets/conversations.css';
 const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 import PropTypes from 'prop-types';
+import styles from '../../styles/conversations.css';
 
 export default function ConvoItem({ convo }) {
   const [fromUser, setFromUser] = useState({});
@@ -23,16 +24,16 @@ export default function ConvoItem({ convo }) {
 
   return (
     <Link to={`/convo/${currentUserId}/detail/${convo.id}`}>
-      <div>
-        <h4>
+      <div className={styles.convo_container}>
+        <h4 className={styles.from_name}>
             from: {fromUser.displayName}
         </h4>
       </div>
-      <article>
-        <h2>
+      <article className={styles.message_container}>
+        <h2 className={styles.date}>
           {convo.date}
         </h2>
-        <p>
+        <p className={styles.message_p}>
           {convo.message}
         </p>
       </article>        
