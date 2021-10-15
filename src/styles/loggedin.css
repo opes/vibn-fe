@@ -75,7 +75,6 @@ html, body {
   background-color: var(--g-color);
   box-shadow: 2px 1px 20px 15px var(--f-color);
   border: 5px solid var(--f-color);
-  color: var(--f-color);
 }
 
 .vibn_logo {
@@ -105,3 +104,4 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
+

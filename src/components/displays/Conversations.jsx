@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
-import { fetchConvosByUserId } from '../../services/convos';
+import React, { useEffect, useState } from 'react';
+import { fetchMessagesToCurrentUser } from '../../services/convos';
 import ConvoItem from './ConvoItem';
+import Header from './Header';
 
 export default function Conversations() {
   const [conversations, setConversations] = useState([]);
-  const filterById = (item) => {
-    if (item.toUser === localStorage.getItem('CURRENT_USER_ID')) {
-      return true;
-    }
-  };
 
   const currentUserId = localStorage.getItem('CURRENT_USER_ID');
-  const convos = fetchConvosByUserId(currentUserId);
-  const filteredConvos = convos.filter(filterById);
-  setConversations(filteredConvos);
+
+  console.log(conversations);
+
+  useEffect(() => {
+    fetchMessagesToCurrentUser(currentUserId)
+      .then((convos) => setConversations(convos));
+  }, []);
 
   return (
     <div>
+      <Header />
       <h1>Your Messages</h1>
       <main>
         {conversations.map(item => 
           <ConvoItem 
-            key={currentUserId}
+            key={item.id}
             convo={item} id={currentUserId} />)}
       </main>
     </div>

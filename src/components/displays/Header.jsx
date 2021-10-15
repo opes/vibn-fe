@@ -7,6 +7,8 @@ import profile_icon from '../../assets/profile-icon.png';
 import vibn from '../../assets/vibn.png';
 import styles from '../../styles/header.css';
 
+const currentUserId = localStorage.getItem('CURRENT_USER_ID')
+
 export default class Header extends Component {
 
   handleSignout = (event) => {
@@ -40,7 +42,7 @@ export default class Header extends Component {
             />
           </Link>
           <div className={styles.icon}>
-            <Link to="/user/:id/conversations">
+            <Link to={`/convo/${currentUserId}/conversations`}>
               <img className={styles.cvicon} src={cv_icon} />
             </Link>
           </div>

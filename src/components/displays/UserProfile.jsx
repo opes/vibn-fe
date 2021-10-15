@@ -6,6 +6,7 @@ import Header from './Header';
 import useLoggedInUser from '../../hooks/useLoggedInUser';
 import { postUserArtists } from '../../services/userAuth';
 import logo from '../../assets/spotify-icon.png';
+
 const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 
 export default function UserProfile() {

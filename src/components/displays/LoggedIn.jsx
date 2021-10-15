@@ -3,8 +3,6 @@ import { useHistory } from 'react-router-dom';
 import useUsers from '../../hooks/useUsers';
 import PropTypes from 'prop-types';
 import styles from '../../styles/loggedin.css';
-// import linebreak from '../../assets/linebreak.png';
-// import vibn from '../../assets/vibn.png';
 
 const spinner =
   'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
