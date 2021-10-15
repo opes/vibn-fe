@@ -32,6 +32,7 @@ export default function UserList() {
           justifyContent: 'center',
           justifyItems: 'center',
           fontFamily: 'Streamster',
+          padding: '10px'
         }}
       >
         {allUsers.map((user) => (
