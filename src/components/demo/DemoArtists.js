@@ -69,7 +69,7 @@ const demoArtists = [
     artistImage:
       'https://i.scdn.co/image/ab67616100005174e722d94809f16241e74c5b43',
     artistUrl: 'https://open.spotify.com/artist/2dIgFjalVxs4ThymZ67YCE',
-    artistGenre: ['kpop', 'k-pop girl group'],
+    artistGenre: ['kpop', 'k-pop boy group'],
   },
   {
     id: '1KP6TWI40m7p3QBTU6u2xo',
