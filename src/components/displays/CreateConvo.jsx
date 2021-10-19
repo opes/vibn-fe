@@ -49,7 +49,11 @@ export default function CreateConvo() {
       date: today,
     });
 
+<<<<<<< HEAD
     history.push(`/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
+=======
+    history.push(`/convo/${localStorage.getItem('CURRENT_USER_ID')}/conversations`);
+>>>>>>> 808b5cbab8f2f9869d7fb9975c442b7cd5b37b65
   };
 
   const handleTextChange = async (event) => {
