@@ -1,5 +1,5 @@
 # vibn
-## the social networking platform to find your musical match
+## A mobile-first, vaporwave-themed social networking platform that uses Spotify to connect authorized users based on their music tastes.
 
 ### Created by Brianna Bias, Elise Muellerleile, & Sofia Tejada
 ---
