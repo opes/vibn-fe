@@ -7,10 +7,9 @@ import profile_icon from '../../assets/profile-icon.png';
 import vibn from '../../assets/vibn.png';
 import styles from '../../styles/header.css';
 
-const currentUserId = localStorage.getItem('CURRENT_USER_ID')
+const currentUserId = localStorage.getItem('CURRENT_USER_ID');
 
 export default class Header extends Component {
-
   handleSignout = (event) => {
     event.preventDefault();
     localStorage.setItem('REFRESH_TOKEN', '');
