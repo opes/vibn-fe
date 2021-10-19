@@ -7,15 +7,10 @@ import profile_icon from '../../assets/profile-icon.png';
 import vibn from '../../assets/vibn.png';
 import styles from '../../styles/header.css';
 
-const currentUserId = localStorage.getItem('CURRENT_USER_ID')
-
-export default class Header extends Component {
+export default class DemoHeader extends Component {
 
   handleSignout = (event) => {
     event.preventDefault();
-    localStorage.setItem('REFRESH_TOKEN', '');
-    localStorage.setItem('ACCESS_TOKEN', '');
-    localStorage.setItem('CURRENT_USER_ID', '');
     window.localStorage.clear();
     window.location.href = '/';
   };
@@ -42,12 +37,12 @@ export default class Header extends Component {
             />
           </Link>
           <div className={styles.icon}>
-            <Link to={`/convo/${currentUserId}/conversations`}>
+            <Link to="/convo/demo/conversations">
               <img className={styles.cvicon} src={cv_icon} />
             </Link>
           </div>
           <div className={styles.icon}>
-            <Link to="/user/:id/dash">
+            <Link to="/demo-profile">
               <img className={styles.cicon} src={profile_icon} />
             </Link>
           </div>

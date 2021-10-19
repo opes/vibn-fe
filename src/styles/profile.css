@@ -33,7 +33,7 @@ html {
 }
 
 .profile_pic,
-.user_img {
+.user_img, .demo_pic {
   margin-top: 8vmin;
   border-radius: 200px;
   align-self: center;
@@ -41,6 +41,10 @@ html {
   box-shadow: var(--a-color) 0 -1px 4px, var(--b-color) 0 -2px 50px,
     var(--c-color) 0 -10px 50px, var(--d-color) 0 -18px 40px,
     7px 7px 9px 15px rgba(0, 0, 0, 0);
+}
+
+.demo_pic {
+  height: 300px;
 }
 
 .user_img:hover {
