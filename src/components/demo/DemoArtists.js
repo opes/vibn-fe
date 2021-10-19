@@ -39,6 +39,14 @@ const demoArtists = [
     artistUrl: 'https://open.spotify.com/artist/2EMAnMvWE2eb56ToJVfCWs',
     artistGenre: ['hip hop', 'rap'],
   },
+  {
+    id: '1z4g3DjTBBZKhvAroFlhOM',
+    artistName: 'Red Velvet',
+    artistImage:
+      'https://i.scdn.co/image/ab6761610000517444a1749aabb0a184657d877d',
+    artistUrl: 'https://open.spotify.com/artist/1z4g3DjTBBZKhvAroFlhOM',
+    artistGenre: ['kpop', 'kpop girl group'],
+  },
 ];
 
 export default demoArtists;
