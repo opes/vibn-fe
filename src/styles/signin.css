@@ -43,13 +43,39 @@ html, body {
     background-color: var(--h-color);
 }
 
+.demo_btn {
+    font-family: 'Larabiefont',  Tahoma;
+    font-size: 4.5vmin;
+    font-weight: 900;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    padding: 1rem;
+    margin: 10vmin;
+    border-radius: 300px;
+    border: 5px solid var(--a-color);
+    box-shadow: 2px 1px 20px 15px var(--a-color);
+    color: var(--j-color);
+    background-color: var(--c-color);
+}
+
 .signin_btn:hover {
   cursor: pointer;
   border-radius: 300px;
   background-color: var(--b-color);
   box-shadow: 2px 1px 20px 15px var(--a-color);
   border: 5px solid var(--a-color);
-  color: var(--f-color);
+  color: var(--j-color);
+  font-weight: 900;
+}
+
+.demo_btn:hover {
+  cursor: pointer;
+  border-radius: 300px;
+  background-color: var(--j-color);
+  box-shadow: 2px 1px 20px 15px var(--i-color);
+  border: 5px solid var(--i-color);
+  color: var(--c-color);
   font-weight: 900;
 }
 

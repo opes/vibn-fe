@@ -9,6 +9,10 @@ import LoggedIn from '../displays/LoggedIn';
 import About from '../displays/About';
 import CreateConvo from '../displays/CreateConvo';
 import ConvoDetail from '../displays/ConvoDetail';
+import DemoProfile from '../demo/DemoProfile';
+import DemoConversations from '../demo/DemoConversations';
+import DemoConvo1 from '../demo/DemoConvo1';
+import DemoConvo2 from '../demo/DemoConvo2';
 
 export default function App() {
   return (
@@ -16,9 +20,16 @@ export default function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Signin} />
-          <Route exact path="/user/:id/:access_token/:refresh_token" component={LoggedIn} />
+          <Route
+            exact
+            path="/user/:id/:access_token/:refresh_token"
+            component={LoggedIn}
+          />
           <Route exact path="/user/:id/dash">
             <UserProfile />
+          </Route>
+          <Route exact path="/demo-profile">
+            <DemoProfile />
           </Route>
           <Route exact path="/users">
             <UserList />
@@ -29,6 +40,9 @@ export default function App() {
           <Route exact path="/create/:id/">
             <CreateConvo />
           </Route>
+          <Route path="/convo/demo/conversations">
+            <DemoConversations />
+          </Route>
           <Route path="/convo/:id/conversations">
             <Conversations />
           </Route>
@@ -37,6 +51,12 @@ export default function App() {
           </Route>
           <Route exact path="/convo/:id/detail/:convoId">
             <ConvoDetail />
+          </Route>
+          <Route exact path="/convo/demo/detail/demo1">
+            <DemoConvo1 />
+          </Route>
+          <Route exact path="/convo/demo/detail/demo2">
+            <DemoConvo2 />
           </Route>
         </Switch>
       </BrowserRouter>
