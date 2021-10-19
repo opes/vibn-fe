@@ -20,6 +20,7 @@ body {
   font-family: 'Streamster', 'Permanent Marker', cursive;
   color: var(--a-color);
   text-shadow: 5px 8px 10px var(--c-color);
+  background-color: black;
 }
 
 .convo_container {
