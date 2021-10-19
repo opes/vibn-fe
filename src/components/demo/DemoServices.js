@@ -28,7 +28,7 @@ export const fetchDemoUserById = async (id) => {
 export const fetchDemoArtists = async () => {
   const res = await fetch(artistsURL);
   const artists = await res.json();
-
+  
   return artists;
 };
 
