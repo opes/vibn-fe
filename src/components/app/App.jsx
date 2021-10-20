@@ -13,6 +13,9 @@ import DemoProfile from '../demo/DemoProfile';
 import DemoConversations from '../demo/DemoConversations';
 import DemoConvo1 from '../demo/DemoConvo1';
 import DemoConvo2 from '../demo/DemoConvo2';
+import DemoAbout from '../demo/DemoAbout';
+import DemoUserList from '../demo/DemoUserList';
+import DemoUserDetail from '../demo/DemoUserDetail';
 
 export default function App() {
   return (
@@ -34,8 +37,14 @@ export default function App() {
           <Route exact path="/users">
             <UserList />
           </Route>
+          <Route exact path="/demo-users">
+            <DemoUserList />
+          </Route>
           <Route exact path="/users/:id">
             <UserDetail />
+          </Route>
+          <Route exact path="/demo-users/:id">
+            <DemoUserDetail />
           </Route>
           <Route exact path="/create/:id/">
             <CreateConvo />
@@ -48,6 +57,9 @@ export default function App() {
           </Route>
           <Route exact path="/about">
             <About />
+          </Route>
+          <Route exact path="/demo-about">
+            <DemoAbout />
           </Route>
           <Route exact path="/convo/:id/detail/:convoId">
             <ConvoDetail />

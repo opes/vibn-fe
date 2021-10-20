@@ -17,12 +17,12 @@ const demoUsers = [
         artistGenre: ['kpop', 'k-pop girl group'],
       },
       {
-        id: '3Nrfpe0tUJi4K4DXYWgMUX',
-        artistName: 'BTS',
+        id: '7Ln80lUS6He07XvHI8qqHH',
+        artistName: 'Arctic Monkeys',
         artistImage:
-          'https://i.scdn.co/image/ab6761610000517482a5d58059f81867b871d8b6',
-        artistUrl: 'https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX',
-        artistGenre: ['kpop', 'k-pop boy group'],
+          'https://i.scdn.co/image/ab6761610000517439f37a34b404169fdca52dc8',
+        artistUrl: 'https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH',
+        artistGenre: ['garage rock', 'permanent wave'],
       },
       {
         id: '0XATRDCYuuGhk0oE7C0o5G',
@@ -92,12 +92,12 @@ const demoUsers = [
         artistGenre: ['alternative rock', 'modern rock'],
       },
       {
-        id: '7Ln80lUS6He07XvHI8qqHH',
-        artistName: 'Arctic Monkeys',
+        id: '3Nrfpe0tUJi4K4DXYWgMUX',
+        artistName: 'BTS',
         artistImage:
-          'https://i.scdn.co/image/ab6761610000517439f37a34b404169fdca52dc8',
-        artistUrl: 'https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH',
-        artistGenre: ['garage rock', 'permanent wave'],
+          'https://i.scdn.co/image/ab6761610000517482a5d58059f81867b871d8b6',
+        artistUrl: 'https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX',
+        artistGenre: ['kpop', 'k-pop boy group'],
       },
     ],
   },
@@ -262,110 +262,152 @@ const demoUsers = [
       'https://open.spotify.com/playlist/6gOJOnsgo0IlXGvswYYFDq?si=0b67400f1f744045',
     profileImage:
       'https://thumbs.dreamstime.com/b/old-smiling-gray-haired-woman-holding-dollar-cash-money-home-old-smiling-gray-haired-woman-100326665.jpg',
-    topArtists: [],
-  },
-  {
-    id: '777',
-    displayName: 'Mara123',
-    email: 'mara@busey.co',
-    profileURL:
-      'https://open.spotify.com/user/tdar2zzv9peqiahhdf1liqgoc?si=50a5a5c4aade4db7',
-    profileImage:
-      'https://styles.redditmedia.com/t5_2thci/styles/communityIcon_f22vdzw73e071.png',
-    topArtists: [],
-  },
-  {
-    id: '888',
-    displayName: 'Jim',
-    email: 'jim@busey.co',
-    profileURL:
-      'https://open.spotify.com/playlist/37i9dQZF1DWY1j3jZdCWOQ?si=1a88d181eb6347dc',
-    profileImage:
-      'https://www.cashcolorcannabis.com/wp-content/uploads/2018/07/MNAQ4uuc0h.jpg',
-    topArtists: [],
-  },
-  {
-    id: '999',
-    displayName: 'RashidaLovesCats',
-    email: 'rashida@busey.co',
-    profileURL:
-      'https://open.spotify.com/user/hcb8th13610kpqqt7lwtdwdhz?si=03e862430b06451a',
-    profileImage:
-      'https://i.pinimg.com/originals/82/9b/88/829b88b807c40fc5a8a054833366f791.jpg',
-    topArtists: [],
-  },
-  {
-    id: '123',
-    displayName: 'Catrick_Swayze',
-    email: 'catrick@busey.co',
-    profileURL:
-      'https://open.spotify.com/user/31v5zmkbprzeux3ghbjragrpijrm?si=04837c69c52447bf',
-    profileImage:
-      'https://lovecatsworld.com/wp-content/uploads/2021/07/image-8.png',
-  },
-  {
-    id: '444',
-    displayName: 'Renaldo',
-    email: 'renaldo@busey.co',
-    profileURL:
-      'https://open.spotify.com/playlist/37i9dQZF1DX9tPFwDMOaN1?si=c7515e62de2c4b91',
-    profileImage:
-      'https://www.memesmonkey.com/images/memesmonkey/95/9529743fd87cc4b475d6ba5a49a97ca6.jpeg',
-  },
-  {
-    id: '555',
-    displayName: 'Jeeves',
-    email: 'jeeves@busey.co',
-    profileURL:
-      'https://open.spotify.com/album/2AG5Udh8TM6Ww8dRYR3eVy?si=jr-nNQrwSrOTfcCCN6QNPQ',
-    profileImage:
-      'https://st2.depositphotos.com/1032561/7236/i/600/depositphotos_72367653-stock-photo-waiter-holding-an-empty-silver.jpg',
-  },
-  {
-    id: '666',
-    displayName: 'Amanda',
-    email: 'amanda@busey.co',
-    profileURL:
-      'https://open.spotify.com/playlist/6gOJOnsgo0IlXGvswYYFDq?si=0b67400f1f744045',
-    profileImage:
-      'https://thumbs.dreamstime.com/b/old-smiling-gray-haired-woman-holding-dollar-cash-money-home-old-smiling-gray-haired-woman-100326665.jpg',
-  },
-  {
-    id: '777',
-    displayName: 'Mara123',
-    email: 'mara@busey.co',
-    profileURL:
-      'https://open.spotify.com/user/tdar2zzv9peqiahhdf1liqgoc?si=50a5a5c4aade4db7',
-    profileImage:
-      'https://styles.redditmedia.com/t5_2thci/styles/communityIcon_f22vdzw73e071.png',
-  },
-  {
-    id: '888',
-    displayName: 'Jim',
-    email: 'jim@busey.co',
-    profileURL:
-      'https://open.spotify.com/playlist/37i9dQZF1DWY1j3jZdCWOQ?si=1a88d181eb6347dc',
-    profileImage:
-      'https://www.cashcolorcannabis.com/wp-content/uploads/2018/07/MNAQ4uuc0h.jpg',
-  },
-  {
-    id: '999',
-    displayName: 'RashidaLovesCats',
-    email: 'rashida@busey.co',
-    profileURL:
-      'https://open.spotify.com/user/hcb8th13610kpqqt7lwtdwdhz?si=03e862430b06451a',
-    profileImage:
-      'https://i.pinimg.com/originals/82/9b/88/829b88b807c40fc5a8a054833366f791.jpg',
-  },
-  {
-    id: '123',
-    displayName: 'Catrick_Swayze',
-    email: 'catrick@busey.co',
-    profileURL:
-      'https://open.spotify.com/user/31v5zmkbprzeux3ghbjragrpijrm?si=04837c69c52447bf',
-    profileImage:
-      'https://lovecatsworld.com/wp-content/uploads/2021/07/image-8.png',
+    topArtists: [
+      {
+        id: '6ueGR6SWhUJfvEhqkvMsVs',
+        artistName: 'Janelle Monáe',
+        artistImage:
+          'https://i.scdn.co/image/ab676161000051743ea2c03525939b482f8d3bfd',
+        artistUrl: 'https://open.spotify.com/artist/6ueGR6SWhUJfvEhqkvMsVs',
+        artistGenre: ['afrofuturism', 'alternative r&b'],
+      },
+      {
+        id: '0pnd3MP2rxAzljR9AqXUJB',
+        artistName: 'Little Big',
+        artistImage:
+          'https://i.scdn.co/image/ab67616100005174f48c408cb082a59cb7e2c821',
+        artistUrl: 'https://open.spotify.com/artist/0pnd3MP2rxAzljR9AqXUJB',
+        artistGenre: ['hard bass', 'russian rave'],
+      },
+      {
+        id: '2dIgFjalVxs4ThymZ67YCE',
+        artistName: 'Stray Kids',
+        artistImage:
+          'https://i.scdn.co/image/ab67616100005174e722d94809f16241e74c5b43',
+        artistUrl: 'https://open.spotify.com/artist/2dIgFjalVxs4ThymZ67YCE',
+        artistGenre: ['kpop', 'k-pop boy group'],
+      },
+      {
+        id: '7jVv8c5Fj3E9VhNjxT4snq',
+        artistName: 'Lil Nas X',
+        artistImage:
+          'https://i.scdn.co/image/ab67616100005174ab6bd6e450cbc7629a9a2381',
+        artistUrl: 'https://open.spotify.com/artist/7jVv8c5Fj3E9VhNjxT4snq',
+        artistGenre: ['lgbtq+ hip hop', 'pop'],
+      },
+      {
+        id: '73sIBHcqh3Z3NyqHKZ7FOL',
+        artistName: 'Childish Gambino',
+        artistImage:
+          'https://i.scdn.co/image/ab676161000051743ef779aa0d271adb2b6a3ded',
+        artistUrl: 'https://open.spotify.com/artist/73sIBHcqh3Z3NyqHKZ7FOL',
+        artistGenre: ['atl hip hop', 'hip hop'],
+      },
+    ],
   },
 ];
 
 export default demoUsers;
+
+// {
+//   id: '777',
+//   displayName: 'Mara123',
+//   email: 'mara@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/user/tdar2zzv9peqiahhdf1liqgoc?si=50a5a5c4aade4db7',
+//   profileImage:
+//     'https://styles.redditmedia.com/t5_2thci/styles/communityIcon_f22vdzw73e071.png',
+//   topArtists: [],
+// },
+// {
+//   id: '888',
+//   displayName: 'Jim',
+//   email: 'jim@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/playlist/37i9dQZF1DWY1j3jZdCWOQ?si=1a88d181eb6347dc',
+//   profileImage:
+//     'https://www.cashcolorcannabis.com/wp-content/uploads/2018/07/MNAQ4uuc0h.jpg',
+//   topArtists: [],
+// },
+// {
+//   id: '999',
+//   displayName: 'RashidaLovesCats',
+//   email: 'rashida@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/user/hcb8th13610kpqqt7lwtdwdhz?si=03e862430b06451a',
+//   profileImage:
+//     'https://i.pinimg.com/originals/82/9b/88/829b88b807c40fc5a8a054833366f791.jpg',
+//   topArtists: [],
+// },
+// {
+//   id: '123',
+//   displayName: 'Catrick_Swayze',
+//   email: 'catrick@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/user/31v5zmkbprzeux3ghbjragrpijrm?si=04837c69c52447bf',
+//   profileImage:
+//     'https://lovecatsworld.com/wp-content/uploads/2021/07/image-8.png',
+// },
+// {
+//   id: '444',
+//   displayName: 'Renaldo',
+//   email: 'renaldo@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/playlist/37i9dQZF1DX9tPFwDMOaN1?si=c7515e62de2c4b91',
+//   profileImage:
+//     'https://www.memesmonkey.com/images/memesmonkey/95/9529743fd87cc4b475d6ba5a49a97ca6.jpeg',
+// },
+// {
+//   id: '555',
+//   displayName: 'Jeeves',
+//   email: 'jeeves@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/album/2AG5Udh8TM6Ww8dRYR3eVy?si=jr-nNQrwSrOTfcCCN6QNPQ',
+//   profileImage:
+//     'https://st2.depositphotos.com/1032561/7236/i/600/depositphotos_72367653-stock-photo-waiter-holding-an-empty-silver.jpg',
+// },
+// {
+//   id: '666',
+//   displayName: 'Amanda',
+//   email: 'amanda@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/playlist/6gOJOnsgo0IlXGvswYYFDq?si=0b67400f1f744045',
+//   profileImage:
+//     'https://thumbs.dreamstime.com/b/old-smiling-gray-haired-woman-holding-dollar-cash-money-home-old-smiling-gray-haired-woman-100326665.jpg',
+// },
+// {
+//   id: '777',
+//   displayName: 'Mara123',
+//   email: 'mara@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/user/tdar2zzv9peqiahhdf1liqgoc?si=50a5a5c4aade4db7',
+//   profileImage:
+//     'https://styles.redditmedia.com/t5_2thci/styles/communityIcon_f22vdzw73e071.png',
+// },
+// {
+//   id: '888',
+//   displayName: 'Jim',
+//   email: 'jim@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/playlist/37i9dQZF1DWY1j3jZdCWOQ?si=1a88d181eb6347dc',
+//   profileImage:
+//     'https://www.cashcolorcannabis.com/wp-content/uploads/2018/07/MNAQ4uuc0h.jpg',
+// },
+// {
+//   id: '999',
+//   displayName: 'RashidaLovesCats',
+//   email: 'rashida@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/user/hcb8th13610kpqqt7lwtdwdhz?si=03e862430b06451a',
+//   profileImage:
+//     'https://i.pinimg.com/originals/82/9b/88/829b88b807c40fc5a8a054833366f791.jpg',
+// },
+// {
+//   id: '123',
+//   displayName: 'Catrick_Swayze',
+//   email: 'catrick@busey.co',
+//   profileURL:
+//     'https://open.spotify.com/user/31v5zmkbprzeux3ghbjragrpijrm?si=04837c69c52447bf',
+//   profileImage:
+//     'https://lovecatsworld.com/wp-content/uploads/2021/07/image-8.png',
+// },

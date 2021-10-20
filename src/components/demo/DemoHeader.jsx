@@ -25,11 +25,11 @@ export default class DemoHeader extends Component {
             </Link>
           </div>
           <div className={styles.icon}>
-            <Link to="/users">
+            <Link to="/demo-users">
               <img className={styles.aicon} src={list_icon} />
             </Link>
           </div>
-          <Link to="/about">
+          <Link to="/demo-about">
             <img
               className={styles.vibn_logo}
               src={vibn}

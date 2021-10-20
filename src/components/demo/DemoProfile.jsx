@@ -12,7 +12,6 @@ const spinner =
 export default function DemoProfile() {
   const { loading } = useLoggedInUser();
   const artist = demoUsers[1].topArtists;
-  console.log('------demouser----', artist);
 
   if (loading) {
     return <img className={styles.spinner} src={spinner} alt="spinner" />;
@@ -50,7 +49,6 @@ export default function DemoProfile() {
               <p className={styles.artist_name}>{artist.artistName}</p>
             </li>
           ))}
-          ;
         </ul>
       </section>
     </div>
